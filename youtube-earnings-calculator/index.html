@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6VK537JGM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-S6VK537JGM');
@@ -84,13 +84,38 @@
             },
             {
               "@type": "Question",
-              "name": "How many views do I need to make $1000?",
+              "name": "How many views do I need to make $1,000?",
               "acceptedAnswer": { "@type": "Answer", "text": "At an average RPM of $4.00, you would need approximately 250,000 views to earn $1,000." }
             },
             {
               "@type": "Question",
-              "name": "Does YouTube pay for subscribers?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. You are paid based on ad views (impressions), not the number of subscribers you have." }
+              "name": "What is a good CPM in 2026?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A 'good' CPM is anything above $10.00. The average across all of YouTube is closer to $4.00 - $6.00. Finance and business channels often see CPMs of $30+." }
+            },
+            {
+              "@type": "Question",
+              "name": "When does YouTube pay me?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Google AdSense sends payments once a month, typically between the 21st and the 26th. You must meet the minimum threshold of $100 USD to trigger a payout." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I get paid for subscribers?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. You are only paid for valid ad impressions measured by views. However, having more subscribers usually leads to more views when you publish new videos." }
+            },
+            {
+              "@type": "Question",
+              "name": "Why does YouTube Shorts pay less?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Shorts uses a 'Creator Pool' model where revenue is pooled and distributed by view share. This results in roughly $0.01–$0.06 per 1,000 Shorts views — significantly lower than long-form content." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does skipping ads affect my earnings?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. If a viewer skips an ad before the 30-second mark (or the end of the ad), the advertiser is often not charged, meaning you don't get paid for that impression." }
+            },
+            {
+              "@type": "Question",
+              "name": "How accurate is this calculator?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Results are estimates based on industry-standard formulas. Actual earnings depend on your specific audience demographics, ad inventory fill rate, and engagement. Use as a planning estimate." }
             }
           ]
         }
@@ -124,7 +149,14 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <div class="hero-badge anim-1">📊 AdSense Estimator</div>
-      <h1 class="hero-h1 anim-2">YouTube Earnings <span class="grad">Calculator 2026</span></h1>
+      <h1 class="hero-h1 anim-2">
+        <svg width="48" height="34" viewBox="0 0 48 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="hero-icon">
+          <rect width="48" height="34" rx="8" fill="#FF0000" />
+          <path d="M32 17L19 24.5V9.5L32 17Z" fill="white" />
+        </svg>
+        YouTube Earnings <span class="grad">Calculator 2026</span>
+      </h1>
       <div class="page-updated anim-3">Last Updated: February 2026</div>
       <p class="hero-sub anim-4">Calculate your estimated daily, monthly, and yearly income from YouTube ad revenue
         (AdSense).</p>
@@ -132,41 +164,98 @@
   </section>
 
   <div class="container">
-    <div class="calc-section">
+    <div class="calc-section" id="youtube">
       <div class="card">
         <div class="card-grid">
           <div class="card-left">
-            <div class="form-group">
-              <label>Daily Video Views</label>
-              <input type="number" id="ytViews" value="5000" placeholder="e.g. 5000" oninput="calcYT()">
+
+            <div class="tabs">
+              <button class="tab on" onclick="ytTab(this,'v')">By Views + CPM</button>
+              <button class="tab" onclick="ytTab(this,'r')">By RPM</button>
             </div>
+
+            <div id="yt-v">
+              <div class="form-group">
+                <label>Daily Views <span class="tip-wrap"><span class="tip-icon">i</span><span class="tip-text">Average
+                      views per day across all your uploaded videos.</span></span></label>
+                <input type="number" id="ytViews" value="10000" oninput="calcYT()">
+              </div>
+              <div class="input-row">
+                <div class="form-group">
+                  <label>CPM ($)</label>
+                  <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="ytCPM" value="4"
+                      step="0.1" oninput="calcYT()"></div>
+                </div>
+                <div class="form-group">
+                  <label>Monetized %</label>
+                  <input type="number" id="ytMon" value="45" max="100" oninput="calcYT()">
+                </div>
+              </div>
+            </div>
+
+            <div id="yt-r" style="display:none">
+              <div class="form-group">
+                <label>Daily Views</label>
+                <input type="number" id="ytViews2" value="10000" oninput="calcYT()">
+              </div>
+              <div class="form-group">
+                <label>RPM ($) <span class="tip-wrap"><span class="tip-icon">i</span><span class="tip-text">Revenue Per
+                      Mille — what you earn per 1,000 views after YouTube's 45% cut.</span></span></label>
+                <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="ytRPM" value="2.2"
+                    step="0.1" oninput="calcYT()"></div>
+              </div>
+            </div>
+
             <div class="range-group">
               <div class="range-top">
-                <label>Estimated CPM ($)</label>
-                <span class="range-val" id="ytCpmLbl">$4.00/1k</span>
+                <label>Shorts Ratio</label>
+                <span class="range-val" id="ytShortsLbl">20%</span>
               </div>
-              <input type="range" id="ytCPM" min="0.5" max="50" step="0.5" value="4"
-                oninput="updateLbl('ytCpmLbl','$'+parseFloat(this.value).toFixed(2)+'/1k');calcYT()">
+              <input type="range" id="ytShorts" min="0" max="100" value="20"
+                oninput="updateLbl('ytShortsLbl',this.value+'%');calcYT()">
             </div>
+
             <div class="form-group">
-              <label>Content Type</label>
-              <select id="ytType" onchange="calcYT()">
-                <option value="1.0">Standard Video (> 1 min)</option>
-                <option value="0.05">YouTube Shorts (< 1 min)</option>
+              <label>Country / Audience</label>
+              <select id="ytCountry" onchange="calcYT()">
+                <option value="1">🌍 Global Average (×1.0)</option>
+                <option value="3.2">🇺🇸 United States (×3.2)</option>
+                <option value="2.8">🇬🇧 United Kingdom (×2.8)</option>
+                <option value="2.5">🇦🇺 Australia (×2.5)</option>
+                <option value="2.1">🇨🇦 Canada (×2.1)</option>
+                <option value="1.8">🇩🇪 Germany (×1.8)</option>
+                <option value="1.5">🇫🇷 France (×1.5)</option>
+                <option value="1.4">🇯🇵 Japan (×1.4)</option>
+                <option value="0.4">🇮🇳 India (×0.4)</option>
+                <option value="0.35">🇵🇰 Pakistan (×0.35)</option>
+                <option value="0.3">🇧🇩 Bangladesh (×0.3)</option>
+                <option value="0.5">🇧🇷 Brazil (×0.5)</option>
+                <option value="0.6">🇲🇽 Mexico (×0.6)</option>
+                <option value="0.55">🇵🇭 Philippines (×0.55)</option>
+                <option value="0.45">🇳🇬 Nigeria (×0.45)</option>
               </select>
             </div>
-            <button class="btn-primary" onclick="calcYT()">⚡ Calculate Income</button>
-            <div class="notice mt-20">
-              <span class="notice-icon">ℹ️</span>
-              <span><strong>Note:</strong> YouTube generally takes ~45% of ad revenue. This calculator estimates your
-                <strong>net share</strong> (the 55% you keep).</span>
+
+            <div class="range-group">
+              <div class="range-top">
+                <label>Tax Rate</label>
+                <span class="range-val" id="ytTaxLbl">25%</span>
+              </div>
+              <input type="range" id="ytTax" min="0" max="55" value="25"
+                oninput="updateLbl('ytTaxLbl',this.value+'%');calcYT()">
             </div>
+
+            <button class="btn-primary" onclick="calcYT()">⚡ Calculate Earnings</button>
+            <button class="btn-ghost"
+              onclick="resetForm(['ytViews','ytCPM','ytMon','ytViews2','ytRPM'],['ytShorts','ytShortsLbl','20%'],['ytTax','ytTaxLbl','25%']);calcYT()">↺
+              Reset</button>
           </div>
+
           <div class="card-right">
-            <div class="output-hero bg-gradient-yt">
-              <div class="output-label">Estimated Monthly Earnings</div>
+            <div class="output-hero bg-gradient-yt-card">
+              <div class="output-label">Monthly Gross Earnings</div>
               <div class="output-value" id="ytMonthly">$0.00</div>
-              <div class="output-sub">based on current daily views</div>
+              <div class="output-sub">before tax deduction</div>
             </div>
             <div class="breakdown">
               <div class="bd-item">
@@ -177,12 +266,73 @@
                 <div class="bd-val" id="ytYearly">$0.00</div>
                 <div class="bd-label">Yearly</div>
               </div>
+              <div class="bd-item">
+                <div class="bd-val" id="ytNetVal">$0.00</div>
+                <div class="bd-label">After Tax</div>
+              </div>
+              <div class="bd-item">
+                <div class="bd-val" id="ytShortsRev">$0.00</div>
+                <div class="bd-label">Shorts/mo</div>
+              </div>
             </div>
-            <div class="action-row mt-16">
-              <button class="act-btn" onclick="copyTxt('ytMonthly')">⎘ Copy Result</button>
-              <button class="act-btn"
-                onclick="dlTxt('YouTube_Earnings','Monthly Estimate: '+$('ytMonthly').textContent)">↓ Export</button>
+            <div class="formula" id="ytFormula">Revenue = (Views × Mon% × CPM) / 1000</div>
+            <div class="action-row">
+              <button class="act-btn" onclick="copyTxt('ytMonthly')">⎘ Copy</button>
+              <button class="act-btn" onclick="dlTxt('YouTube Earnings')">↓ Export</button>
+              <button class="act-btn" onclick="shareIt()">⤴ Share</button>
             </div>
+          </div>
+        </div>
+        <div class="faq-wrap">
+          <div class="faq-head">Frequently Asked Questions</div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">How much does YouTube pay per 1,000 views? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">On average, YouTube pays between $2 and $12 per 1,000 views for long-form content. Shorts
+              pay significantly less, typically $0.01 to $0.06 per 1,000 views.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">How many views do I need to make $1,000? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">At an average RPM of $4.00, you would need approximately 250,000 views to earn $1,000.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">What is a good CPM in 2026? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">A "good" CPM is anything above $10.00. The average across all of YouTube is closer to
+              $4.00 - $6.00. Finance and business channels often see CPMs of $30+.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">When does YouTube pay me? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">Google AdSense sends payments once a month, typically between the 21st and the 26th. You
+              must meet the minimum threshold of $100 USD to trigger a payout.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">Do I get paid for subscribers? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">No. You are only paid for valid ad impressions measured by views. However, having more
+              subscribers usually leads to more views when you publish new videos.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">Why does YouTube Shorts pay less? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">Shorts uses a "Creator Pool" model where revenue is pooled and distributed by view share.
+              This results in roughly $0.01–$0.06 per 1,000 Shorts views — significantly lower than long-form content.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">Does skipping ads affect my earnings? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">Yes. If a viewer skips an ad before the 30-second mark (or the end of the ad), the
+              advertiser is often not charged, meaning you don't get paid for that impression.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">How accurate is this calculator? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">Results are estimates based on industry-standard formulas. Actual earnings depend on your
+              specific audience demographics, ad inventory fill rate, and engagement. Use as a planning estimate.</div>
           </div>
         </div>
       </div>
@@ -235,96 +385,96 @@
         $4.00 RPM — check yours with our <a href="/youtube-rpm-calculator/">RPM Calculator</a>):</p>
 
       <div class="table-responsive">
-<table class="data-table">
-        <thead>
-          <tr>
-            <th>Video Views</th>
-            <th>Estimated Earnings (Net)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>1,000 Views</strong></td>
-            <td>$2 - $12</td>
-          </tr>
-          <tr>
-            <td><strong>10,000 Views</strong></td>
-            <td>$20 - $120</td>
-          </tr>
-          <tr>
-            <td><strong>100,000 Views</strong></td>
-            <td>$200 - $1,200</td>
-          </tr>
-          <tr>
-            <td><strong>1 Million Views</strong></td>
-            <td>$2,000 - $12,000</td>
-          </tr>
-          <tr>
-            <td><strong>10 Million Views</strong></td>
-            <td>$20,000 - $120,000</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Video Views</th>
+              <th>Estimated Earnings (Net)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1,000 Views</strong></td>
+              <td>$2 - $12</td>
+            </tr>
+            <tr>
+              <td><strong>10,000 Views</strong></td>
+              <td>$20 - $120</td>
+            </tr>
+            <tr>
+              <td><strong>100,000 Views</strong></td>
+              <td>$200 - $1,200</td>
+            </tr>
+            <tr>
+              <td><strong>1 Million Views</strong></td>
+              <td>$2,000 - $12,000</td>
+            </tr>
+            <tr>
+              <td><strong>10 Million Views</strong></td>
+              <td>$20,000 - $120,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>YouTube CPM Rates by Country (2026)</h2>
       <p>Your earnings potential heavily depends on where your viewers are located. Here's how much YouTube pays per
         1,000 views across different countries, based on average CPM rates:</p>
 
       <div class="table-responsive">
-<table class="data-table">
-        <caption>Average YouTube CPM and RPM Rates by Country (2026 Estimates)</caption>
-        <thead>
-          <tr>
-            <th>Country / Region</th>
-            <th>Average CPM</th>
-            <th>Average RPM (Your Cut)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>United States 🇺🇸</strong></td>
-            <td>$8.00 - $15.00</td>
-            <td>$4.40 - $8.25</td>
-          </tr>
-          <tr>
-            <td><strong>Canada 🇨🇦</strong></td>
-            <td>$6.00 - $12.00</td>
-            <td>$3.30 - $6.60</td>
-          </tr>
-          <tr>
-            <td><strong>United Kingdom 🇬🇧</strong></td>
-            <td>$7.00 - $13.00</td>
-            <td>$3.85 - $7.15</td>
-          </tr>
-          <tr>
-            <td><strong>Australia 🇦🇺</strong></td>
-            <td>$6.50 - $11.00</td>
-            <td>$3.58 - $6.05</td>
-          </tr>
-          <tr>
-            <td><strong>Germany 🇩🇪</strong></td>
-            <td>$5.00 - $10.00</td>
-            <td>$2.75 - $5.50</td>
-          </tr>
-          <tr>
-            <td><strong>India 🇮🇳</strong></td>
-            <td>$0.50 - $2.00</td>
-            <td>$0.28 - $1.10</td>
-          </tr>
-          <tr>
-            <td><strong>Brazil 🇧🇷</strong></td>
-            <td>$1.00 - $3.00</td>
-            <td>$0.55 - $1.65</td>
-          </tr>
-          <tr>
-            <td><strong>Philippines 🇵🇭</strong></td>
-            <td>$0.80 - $1.50</td>
-            <td>$0.44 - $0.83</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+        <table class="data-table">
+          <caption>Average YouTube CPM and RPM Rates by Country (2026 Estimates)</caption>
+          <thead>
+            <tr>
+              <th>Country / Region</th>
+              <th>Average CPM</th>
+              <th>Average RPM (Your Cut)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>United States 🇺🇸</strong></td>
+              <td>$8.00 - $15.00</td>
+              <td>$4.40 - $8.25</td>
+            </tr>
+            <tr>
+              <td><strong>Canada 🇨🇦</strong></td>
+              <td>$6.00 - $12.00</td>
+              <td>$3.30 - $6.60</td>
+            </tr>
+            <tr>
+              <td><strong>United Kingdom 🇬🇧</strong></td>
+              <td>$7.00 - $13.00</td>
+              <td>$3.85 - $7.15</td>
+            </tr>
+            <tr>
+              <td><strong>Australia 🇦🇺</strong></td>
+              <td>$6.50 - $11.00</td>
+              <td>$3.58 - $6.05</td>
+            </tr>
+            <tr>
+              <td><strong>Germany 🇩🇪</strong></td>
+              <td>$5.00 - $10.00</td>
+              <td>$2.75 - $5.50</td>
+            </tr>
+            <tr>
+              <td><strong>India 🇮🇳</strong></td>
+              <td>$0.50 - $2.00</td>
+              <td>$0.28 - $1.10</td>
+            </tr>
+            <tr>
+              <td><strong>Brazil 🇧🇷</strong></td>
+              <td>$1.00 - $3.00</td>
+              <td>$0.55 - $1.65</td>
+            </tr>
+            <tr>
+              <td><strong>Philippines 🇵🇭</strong></td>
+              <td>$0.80 - $1.50</td>
+              <td>$0.44 - $0.83</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>Notice the massive difference? A US viewer is worth 10-15x more than a viewer from developing countries. This
         is why targeting English-speaking, Tier-1 audiences significantly increases your YouTube monetization potential.
@@ -398,68 +548,14 @@
 
       <h2>YouTube Partner Program Requirements 2026</h2>
       <p>Before you can start earning money from ads on YouTube, you must qualify for the YouTube Partner Program (YPP).
-        Here are the official YouTube monetization requirements as of 2026:</p>
-
-      <h3>Standard Monetization Eligibility</h3>
+        The current requirements are:</p>
       <ul>
-        <li><strong>1,000 Subscribers:</strong> You must have at least 1,000 people subscribed to your channel.</li>
-        <li><strong>4,000 Watch Hours OR 10M Shorts Views:</strong> In the past 12 months, you need either 4,000 valid
-          public watch hours on long-form videos, or 10 million valid public Shorts views.</li>
-        <li><strong>2-Step Verification:</strong> Your Google Account must have 2-step verification enabled.</li>
-        <li><strong>No Active Community Guidelines Strikes:</strong> Your channel cannot have recent strikes or
-          violations.</li>
-        <li><strong>AdSense Account Linked:</strong> You must create and link a Google AdSense account to receive
-          payments.</li>
-        <li><strong>Residence in Available Country:</strong> The YouTube Partner Program must be available in your
-          country (most countries are supported as of 2026).</li>
+        <li><strong>1,000 Subscribers</strong> AND</li>
+        <li><strong>4,000 Watch Hours</strong> in the last 12 months OR</li>
+        <li><strong>10 Million Shorts Views</strong> in the last 90 days.</li>
       </ul>
-
-      <p>Once accepted, YouTube typically reviews your application within 30 days. You'll receive a notification via
-        email and in YouTube Studio. After approval, you can start enabling ads on your videos and track your earnings
-        using our <a href="/">homepage calculator suite</a>.</p>
-
-      <h2>YouTube vs TikTok Earnings: Which Platform Pays More?</h2>
-      <p>Many creators wonder whether they should focus on YouTube or <a href="/tiktok-earnings-calculator/">TikTok
-          for income</a>. Here's an honest comparison based on 2026 data:</p>
-
-      <div class="table-responsive">
-<table class="data-table">
-        <thead>
-          <tr>
-            <th>Factor</th>
-            <th>YouTube</th>
-            <th>TikTok</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Average RPM</strong></td>
-            <td>$2.00 - $12.00</td>
-            <td>$0.02 - $0.08 (Creativity Program)</td>
-          </tr>
-          <tr>
-            <td><strong>Monetization Threshold</strong></td>
-            <td>1,000 subs + 4,000 hours</td>
-            <td>10,000 followers + 100K views (30 days)</td>
-          </tr>
-          <tr>
-            <td><strong>Revenue Stability</strong></td>
-            <td>Very consistent, predictable</td>
-            <td>Volatile, depends on virality</td>
-          </tr>
-          <tr>
-            <td><strong>Best For</strong></td>
-            <td>Long-term passive income</td>
-            <td>Brand deals, quick growth</td>
-          </tr>
-          <tr>
-            <td><strong>Payout Speed</strong></td>
-            <td>Monthly ($100 minimum)</td>
-            <td>Monthly (varies by program)</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+      <p>Once accepted, you can turn on monetization for your videos. Keep in mind that you must comply with YouTube's
+        content policies to remain eligible.</p>
 
       <p><strong>Bottom Line:</strong> YouTube pays 50-100x more per view than TikTok through ad revenue alone. However,
         TikTok is easier to grow initially and has strong potential for sponsorship deals. Many successful creators use
@@ -467,34 +563,7 @@
         potential earnings using both our <a href="/">YouTube calculator</a> and <a
           href="/tiktok-earnings-calculator/">TikTok earnings tool</a>.</p>
 
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-wrap">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFAQ(this)">When does YouTube pay me? <span
-              class="faq-plus">+</span></button>
-          <div class="faq-a">Google AdSense sends payments once a month, typically between the 21st and the 26th. You
-            must meet the minimum threshold of $100 USD to trigger a payout.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFAQ(this)">Do I get paid for subscribers? <span
-              class="faq-plus">+</span></button>
-          <div class="faq-a">No. You are only paid for valid ad impressions measured by views. However, having more
-            subscribers usually leads to more views when you publish new videos.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFAQ(this)">What is a good CPM in 2026? <span
-              class="faq-plus">+</span></button>
-          <div class="faq-a">A "good" CPM is anything above $10.00. The average across all of YouTube is closer to $4.00
-            - $6.00. Finance channels often see CPMs of $30+.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFAQ(this)">Does skipping ads affect my earnings? <span
-              class="faq-plus">+</span></button>
-          <div class="faq-a">Yes. If a viewer skips an ad before the 5-second mark or before 30 seconds (depending on
-            the ad type), the advertiser is often not charged, meaning you don't get paid for that specific impression.
-          </div>
-        </div>
-      </div>
+
 
       <div class="author-box">
         <div class="author-img">👨‍💻</div>
@@ -585,26 +654,62 @@
 
   <script src="/shared.js" defer></script>
   <script defer>
-    function calcYT() {
-      const views = v('ytViews');
-      const cpm = v('ytCPM');
+    // ── YT MODE ──
+    let ytMode = 'v';
+    function ytTab(btn, mode) {
+      ytMode = mode;
+      document.querySelectorAll('#youtube .tab').forEach(t => t.classList.remove('on'));
+      btn.classList.add('on');
+      const vEl = document.getElementById('yt-v');
+      const rEl = document.getElementById('yt-r');
+      if (vEl) vEl.style.display = mode === 'v' ? '' : 'none';
+      if (rEl) rEl.style.display = mode === 'r' ? '' : 'none';
+      calcYT();
+    }
 
-      // Input guard: prevent NaN and reset display
-      if (!views || views <= 0 || !cpm || cpm <= 0) {
-        set('ytDaily', '$0.00');
-        set('ytMonthly', '$0.00');
-        set('ytYearly', '$0.00');
-        return;
+    // ── 1. YOUTUBE ──
+    function calcYT() {
+      const cm = parseFloat(document.getElementById('ytCountry').value) || 1;
+      const tax = v('ytTax') / 100;
+      const sr = v('ytShorts') / 100;
+      let daily, fml;
+
+      if (ytMode === 'v') {
+        const views = v('ytViews'), cpm = v('ytCPM') * cm, mon = v('ytMon') / 100;
+        daily = views * mon * cpm / 1000;
+        fml = `Revenue = (${fmtN(views)} × ${(mon * 100).toFixed(0)}% × $${cpm.toFixed(2)}) / 1000`;
+      } else {
+        const views = v('ytViews2'), rpm = v('ytRPM') * cm;
+        daily = views * rpm / 1000;
+        fml = `Revenue = (${fmtN(views)} × $${rpm.toFixed(2)}) / 1000`;
       }
 
-      const type = parseFloat($('ytType').value);
-      // Formula: (Views / 1000) * CPM * 0.55 (YT cut) * typeMultiplier
-      const earnings = (views / 1000) * cpm * 0.55 * type;
-
-      set('ytDaily', fmt(earnings));
-      set('ytMonthly', fmt(earnings * 30));
-      set('ytYearly', fmt(earnings * 365));
+      const adjDaily = daily * (1 - sr * 0.7);
+      const monthly = adjDaily * 30;
+      const shortsMonthly = daily * sr * 0.03 * 30 * 1000;
+      set('ytMonthly', fmt(monthly));
+      set('ytDaily', fmt(adjDaily));
+      set('ytYearly', fmt(adjDaily * 365));
+      set('ytNetVal', fmt(monthly * (1 - tax)));
+      set('ytShortsRev', fmt(shortsMonthly));
+      const formEl = document.getElementById('ytFormula');
+      if (formEl) formEl.textContent = fml;
     }
+
+    // Reset Form Helper
+    function resetForm(ids, ...defs) {
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = el.defaultValue || '';
+      });
+      defs.forEach(([id, lblId, val]) => {
+        const el = document.getElementById(id);
+        const lbl = document.getElementById(lblId);
+        if (el) el.value = el.defaultValue || 0;
+        if (lbl) lbl.textContent = val;
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', calcYT);
   </script>
 </body>
