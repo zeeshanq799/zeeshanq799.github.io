@@ -540,26 +540,6 @@
       const comm = v('afComm');
       const typeElem = $('afType');
       const tm = typeElem ? parseFloat(typeElem.value) : 1.0;
-
-      // Logic: Sales = Traffic * Conversion
-      // We apply logic multiplier to Commission potential or conversion likelihood?
-      // Hub logic: doesn't explicitly show `tm` usage in the snippet I saw, but usually it adjusts value.
-      // Let's assume Type Multiplier adjusts the *Expected Value* provided or is just for categorization.
-      // Checking Hub HTML: `onchange="calcAF()"` implies it affects calculation.
-      // Logic: Revenue = Traffic * Conv * Commission * Multiplier?
-      // Actually, standard affiliate math is just Traffic * Conv * Commission.
-      // The "Type" might be a scalar for "Realistic Conversion adjustment" or just modifying `comm` if `comm` wasn't user input.
-      // Since user inputs `comm` manually ($25), `tm` might be redundant unless it adjusts *conversion rate*?
-      // Let's apply standard math: Revenue = Traffic * Conv * Comm. 
-      // If `tm` is present, maybe it scales the *result* to account for refunds/cancellations specific to niche?
-      // e.g. Physical (1.0), Digital (1.5?? No). 
-      // Let's stick to pure math: Sales = Traffic * Conv. Revenue = Sales * Comm.
-      // If the user changes Type, it might just be for their reference, OR I should use it.
-      // Given I don't see the `calcAF` source from Hub (I saw `calcAS` source), I will implement standard math.
-      // Wait, I saw `calcIG` and `calcAS`. I missed `calcAF` source in `creator-earnings-hub.html` view.
-      // I will implement standard math and assume `tm` might slightly adjust `sales` (e.g. valid sales rate).
-      // Let's just use standard math for clarity: Revenue = Traffic * Conv * Comm.
-
       // Logic: Revenue = Traffic * Conv * Commission * Program Type Multiplier
       // The Type Multiplier accounts for upsells, recurring revenue (LTV), or higher average order value beyond base commission.
       const sales = traffic * conv;
