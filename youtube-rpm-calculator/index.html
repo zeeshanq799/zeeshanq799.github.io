@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6VK537JGM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-S6VK537JGM');
@@ -124,7 +124,14 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <div class="hero-badge anim-1">📈 Creator Income Tool</div>
-      <h1 class="hero-h1 anim-2">YouTube RPM <span class="grad">Calculator 2026</span></h1>
+      <h1 class="hero-h1 anim-2">
+        <svg width="48" height="34" viewBox="0 0 48 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="hero-icon">
+          <rect width="48" height="34" rx="8" fill="#FF0000" />
+          <path d="M32 17L19 24.5V9.5L32 17Z" fill="white" />
+        </svg>
+        YouTube RPM <span class="grad">Calculator 2026</span>
+      </h1>
       <div class="page-updated anim-3">Last Updated: February 2026</div>
       <p class="hero-sub anim-4">Calculate your true Revenue Per Mille (RPM) to understand your actual earnings for
         every 1,000 video views.</p>
@@ -137,27 +144,51 @@
         <div class="card-grid">
           <div class="card-left">
             <div class="form-group">
-              <label>Total Revenue Earned ($)</label>
-              <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="rpmRev" value="150"
-                  placeholder="e.g. 150" oninput="calcRPM()"></div>
+              <label>Total Revenue ($)</label>
+              <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="rpmRev" value="280"
+                  oninput="calcRPM()"></div>
             </div>
             <div class="form-group">
-              <label>Total Video Views</label>
-              <input type="number" id="rpmViews" value="50000" placeholder="e.g. 50000" oninput="calcRPM()">
+              <label>Total Views</label>
+              <input type="number" id="rpmViews" value="200000" oninput="calcRPM()">
             </div>
-            <button class="btn-primary" onclick="calcRPM()">⚡ Calculate RPM</button>
+            <div class="compare-box">
+              <div class="compare-item" style="background:var(--red-light);border-color:#fca5a5">
+                <h5 style="color:var(--red)">CPM</h5>
+                <p>What <strong>advertisers pay</strong> YouTube per 1,000 ad impressions. The raw market rate.</p>
+              </div>
+              <div class="compare-item" style="background:var(--green-light);border-color:#86efac">
+                <h5 style="color:var(--green)">RPM</h5>
+                <p>What <strong>you receive</strong> per 1,000 views. After YouTube's 45% revenue share cut.</p>
+              </div>
+            </div>
+            <button class="btn-primary" style="margin-top:16px" onclick="calcRPM()">⚡ Calculate RPM</button>
           </div>
           <div class="card-right">
-            <div class="output-hero bg-gradient-rpm">
-              <div class="out-label">Your RPM</div>
-              <div class="out-val" id="rpmResult">$0.00</div>
-              <div class="out-sub">Net Income Per 1,000 Views</div>
+            <div class="output-hero" style="background:linear-gradient(135deg,#eab308,#22c55e)">
+              <div class="output-label">Your RPM</div>
+              <div class="output-value" id="rpmResult">$0.00</div>
+              <div class="output-sub">Revenue Per 1,000 views</div>
             </div>
-            <div class="formula-box mt-20 text-center">
-              Formula: (Total Revenue ÷ Total Views) × 1,000
+            <div class="breakdown">
+              <div class="bd-item">
+                <div class="bd-val" id="rpmCPMEst">$0.00</div>
+                <div class="bd-label">Est. CPM</div>
+              </div>
+              <div class="bd-item">
+                <div class="bd-val" id="rpmYTCut">$0.00</div>
+                <div class="bd-label">YouTube's Cut</div>
+              </div>
             </div>
-            <div class="action-row mt-16">
-              <button class="act-btn" onclick="copyTxt('rpmResult')">⎘ Copy Result</button>
+            <div class="formula" id="rpmFormula">RPM = (Revenue ÷ Views) × 1,000</div>
+            <div class="notice">
+              <span class="notice-icon">ℹ️</span>
+              <span>RPM ≈ CPM × 0.55 — YouTube keeps 45% of ad revenue. RPM includes all your revenue sources (ads,
+                memberships, Super Chat, etc.).</span>
+            </div>
+            <div class="action-row">
+              <button class="act-btn" onclick="copyTxt('rpmResult')">⎘ Copy</button>
+              <button class="act-btn" onclick="dlTxt('RPM Calculator')">↓ Export</button>
             </div>
           </div>
         </div>
@@ -222,85 +253,85 @@
       <p>This is the most common confusion among new creators. Here is the definitive breakdown of how they differ.</p>
 
       <div class="table-responsive">
-<table class="data-table">
-        <caption>YouTube RPM vs CPM Comparison – 2026 Industry Data</caption>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>RPM (Revenue Per Mille)</th>
-            <th>CPM (Cost Per Mille)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Perspective</strong></td>
-            <td>Creator's Income</td>
-            <td>Advertiser's Cost</td>
-          </tr>
-          <tr>
-            <td><strong>Deductions</strong></td>
-            <td>After YouTube's 45% Cut</td>
-            <td>Before Deductions (Gross)</td>
-          </tr>
-          <tr>
-            <td><strong>View Base</strong></td>
-            <td>All Views (Monetized + Unmonetized)</td>
-            <td>Only Monetized Playbacks</td>
-          </tr>
-          <tr>
-            <td><strong>Includes Supers?</strong></td>
-            <td>Yes (Super Chat, Stickers, etc.)</td>
-            <td>No (Ads Only)</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+        <table class="data-table">
+          <caption>YouTube RPM vs CPM Comparison – 2026 Industry Data</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>RPM (Revenue Per Mille)</th>
+              <th>CPM (Cost Per Mille)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Perspective</strong></td>
+              <td>Creator's Income</td>
+              <td>Advertiser's Cost</td>
+            </tr>
+            <tr>
+              <td><strong>Deductions</strong></td>
+              <td>After YouTube's 45% Cut</td>
+              <td>Before Deductions (Gross)</td>
+            </tr>
+            <tr>
+              <td><strong>View Base</strong></td>
+              <td>All Views (Monetized + Unmonetized)</td>
+              <td>Only Monetized Playbacks</td>
+            </tr>
+            <tr>
+              <td><strong>Includes Supers?</strong></td>
+              <td>Yes (Super Chat, Stickers, etc.)</td>
+              <td>No (Ads Only)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Average RPM by Niche (2026 Benchmarks)</h2>
       <p>Your RPM is heavily influenced by the industry you create content for. Advertisers pay more to reach audiences
         interested in high-ticket items like software or financial products.</p>
 
       <div class="table-responsive">
-<table class="data-table">
-        <caption>YouTube RPM Benchmarks by Content Category (2026 Data)</caption>
-        <thead>
-          <tr>
-            <th>Niche / Industry</th>
-            <th>Average RPM Range</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Finance & Business</strong></td>
-            <td>$15.00 - $50.00+</td>
-          </tr>
-          <tr>
-            <td><strong>Tech & Software</strong></td>
-            <td>$8.00 - $20.00</td>
-          </tr>
-          <tr>
-            <td><strong>Education & How-To</strong></td>
-            <td>$5.00 - $12.00</td>
-          </tr>
-          <tr>
-            <td><strong>Lifestyle & Vlogs</strong></td>
-            <td>$2.00 - $6.00</td>
-          </tr>
-          <tr>
-            <td><strong>Gaming (General)</strong></td>
-            <td>$1.50 - $4.00</td>
-          </tr>
-          <tr>
-            <td><strong>Entertainment / Comedy</strong></td>
-            <td>$1.00 - $3.00</td>
-          </tr>
-          <tr>
-            <td><strong>Shorts (All Niches)</strong></td>
-            <td>$0.01 - $0.06</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+        <table class="data-table">
+          <caption>YouTube RPM Benchmarks by Content Category (2026 Data)</caption>
+          <thead>
+            <tr>
+              <th>Niche / Industry</th>
+              <th>Average RPM Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Finance & Business</strong></td>
+              <td>$15.00 - $50.00+</td>
+            </tr>
+            <tr>
+              <td><strong>Tech & Software</strong></td>
+              <td>$8.00 - $20.00</td>
+            </tr>
+            <tr>
+              <td><strong>Education & How-To</strong></td>
+              <td>$5.00 - $12.00</td>
+            </tr>
+            <tr>
+              <td><strong>Lifestyle & Vlogs</strong></td>
+              <td>$2.00 - $6.00</td>
+            </tr>
+            <tr>
+              <td><strong>Gaming (General)</strong></td>
+              <td>$1.50 - $4.00</td>
+            </tr>
+            <tr>
+              <td><strong>Entertainment / Comedy</strong></td>
+              <td>$1.00 - $3.00</td>
+            </tr>
+            <tr>
+              <td><strong>Shorts (All Niches)</strong></td>
+              <td>$0.01 - $0.06</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Factors That Lower Your RPM</h2>
       <p>If your RPM is lower than the benchmarks above, one of these factors is likely the cause:</p>
@@ -475,17 +506,19 @@
   <script src="/shared.js" defer></script>
   <script defer>
     function calcRPM() {
-      const rev = v('rpmRev');
-      const views = v('rpmViews');
-
-      // Input guard: prevent NaN and reset display
-      if (!rev || rev <= 0 || !views || views <= 0) {
-        set('rpmResult', '$0.00');
-        return;
-      }
-
+      const rev = v('rpmRev'), views = v('rpmViews') || 1;
       const rpm = (rev / views) * 1000;
+      const cpmEst = rpm / 0.55;
+      const ytCut = cpmEst - rpm;
+
       set('rpmResult', fmt(rpm));
+      set('rpmCPMEst', fmt(cpmEst));
+      set('rpmYTCut', fmt(ytCut));
+
+      const formulaEl = document.getElementById('rpmFormula');
+      if (formulaEl) {
+        formulaEl.innerHTML = `RPM = ($${rev.toFixed(2)} ÷ ${fmtN(views)}) × 1,000 = <span>${fmt(rpm)}</span>`;
+      }
     }
     document.addEventListener('DOMContentLoaded', calcRPM);
   </script>
