@@ -735,6 +735,11 @@ input[type=range]::-webkit-slider-thumb:hover {
   margin-bottom: 24px;
 }
 
+.table-responsive table,
+.table-wrap table {
+  min-width: 600px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
