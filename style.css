@@ -381,7 +381,8 @@ textarea {
   font-weight: 500;
   outline: none;
   transition: border-color var(--tr), box-shadow var(--tr);
-  -moz-appearance: textfield
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
@@ -724,11 +725,14 @@ input[type=range]::-webkit-slider-thumb:hover {
   box-shadow: var(--sh-sm)
 }
 
-.table-wrap {
+.table-wrap,
+.table-responsive {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid var(--border);
-  box-shadow: var(--sh-sm)
+  box-shadow: var(--sh-sm);
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
 }
 
 table {
