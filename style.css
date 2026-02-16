@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap);
 
 :root {
   --white: #fff;
@@ -84,7 +84,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 200;
-  background: rgba(255, 255, 255, .93);
+  background: rgb(255 255 255 / .93);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
@@ -168,7 +168,7 @@ nav {
 
 .nav-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(59, 110, 245, .35)
+  box-shadow: 0 10px 28px rgb(59 110 245 / .35)
 }
 
 @media(max-width:780px) {
@@ -186,7 +186,7 @@ nav {
 footer {
   background: var(--white);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, .04);
+  box-shadow: 0 -4px 20px rgb(0 0 0 / .04);
   padding: 56px 28px 36px
 }
 
@@ -383,7 +383,7 @@ textarea {
   outline: none;
   transition: border-color var(--tr), box-shadow var(--tr);
   -moz-appearance: textfield;
-  appearance: textfield;
+  appearance: textfield
 }
 
 input::-webkit-outer-spin-button,
@@ -395,7 +395,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(59, 110, 245, .12)
+  box-shadow: 0 0 0 3px rgb(59 110 245 / .12)
 }
 
 textarea {
@@ -478,7 +478,7 @@ input[type=range]::-webkit-slider-thumb {
   border: 2.5px solid var(--blue);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(59, 110, 245, .3);
+  box-shadow: 0 2px 8px rgb(59 110 245 / .3);
   transition: transform var(--tr)
 }
 
@@ -535,7 +535,7 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(59, 110, 245, .4)
+  box-shadow: 0 8px 28px rgb(59 110 245 / .4)
 }
 
 .btn-primary:active {
@@ -599,7 +599,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   right: -40px;
   width: 120px;
   height: 120px;
-  background: rgba(255, 255, 255, .1);
+  background: rgb(255 255 255 / .1);
   border-radius: 50%
 }
 
@@ -610,7 +610,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   left: -30px;
   width: 80px;
   height: 80px;
-  background: rgba(255, 255, 255, .07);
+  background: rgb(255 255 255 / .07);
   border-radius: 50%
 }
 
@@ -619,7 +619,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .7);
+  color: rgb(255 255 255 / .7);
   margin-bottom: 8px
 }
 
@@ -639,7 +639,7 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 .out-sub {
   font-size: 12px;
-  color: rgba(255, 255, 255, .65);
+  color: rgb(255 255 255 / .65);
   margin-top: 6px;
   font-weight: 500
 }
@@ -733,12 +733,12 @@ input[type=range]::-webkit-slider-thumb:hover {
   border: 1px solid var(--border);
   box-shadow: var(--sh-sm);
   -webkit-overflow-scrolling: touch;
-  margin-bottom: 24px;
+  margin-bottom: 24px
 }
 
 .table-responsive table,
 .table-wrap table {
-  min-width: 600px;
+  min-width: 600px
 }
 
 table {
@@ -1037,7 +1037,7 @@ tr:hover td {
 .hero-h1 .grad {
   background: linear-gradient(135deg, var(--blue), var(--purple));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #fff0;
   background-clip: text
 }
 
@@ -1626,152 +1626,140 @@ tr:hover td {
   }
 }
 
-/* --- Utility Classes --- */
-
-/* Margins */
 .mt-0 {
-  margin-top: 0 !important;
+  margin-top: 0 !important
 }
 
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 10px
 }
 
 .mt-12 {
-  margin-top: 12px;
+  margin-top: 12px
 }
 
 .mt-16 {
-  margin-top: 16px;
+  margin-top: 16px
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px
 }
 
 .mt-24 {
-  margin-top: 24px;
+  margin-top: 24px
 }
 
-/* Additional Gradients */
 .bg-gradient-cpm {
-  background: linear-gradient(135deg, #f97316, #eab308) !important;
+  background: linear-gradient(135deg, #f97316, #eab308) !important
 }
 
 .bg-gradient-rpm {
-  background: linear-gradient(135deg, #eab308, #22c55e) !important;
+  background: linear-gradient(135deg, #eab308, #22c55e) !important
 }
 
-/* Footer Utilities */
 .footer-logo-flex {
   display: flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .footer-logo-text {
   font-family: var(--font-d);
   font-weight: 700;
   font-size: 18px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .footer-logo-img {
   height: 24px;
-  width: auto;
+  width: auto
 }
 
 .mt-40 {
-  margin-top: 40px;
+  margin-top: 40px
 }
 
 .mb-0 {
-  margin-bottom: 0 !important;
+  margin-bottom: 0 !important
 }
 
 .mb-8 {
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .mb-16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px
 }
 
 .mb-24 {
-  margin-bottom: 24px;
+  margin-bottom: 24px
 }
 
-/* Padding & Borders */
 .pt-20 {
-  padding-top: 20px;
+  padding-top: 20px
 }
 
 .pt-40 {
-  padding-top: 40px;
+  padding-top: 40px
 }
 
 .bt-1 {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border)
 }
 
 .bb-1 {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border)
 }
 
-/* Text & Fonts */
 .fw-600 {
-  font-weight: 600;
+  font-weight: 600
 }
 
 .fs-16 {
-  font-size: 16px;
+  font-size: 16px
 }
 
 .fs-20 {
-  font-size: 20px;
+  font-size: 20px
 }
 
 .text-500 {
-  color: var(--text-500);
+  color: var(--text-500)
 }
 
-/* Icons */
 .icon-lg {
-  font-size: 20px;
+  font-size: 20px
 }
 
-/* Gradients */
 .bg-gradient-adsense {
-  background: linear-gradient(135deg, #4285F4, #34A853) !important;
+  background: linear-gradient(135deg, #4285F4, #34A853) !important
 }
 
 .bg-gradient-tiktok {
-  background: linear-gradient(135deg, #000000, #25F4EE) !important;
+  background: linear-gradient(135deg, #000000, #25F4EE) !important
 }
 
 .bg-gradient-insta {
-  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737) !important;
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737) !important
 }
 
 .bg-gradient-yt {
-  background: linear-gradient(135deg, #FF0000, #282828) !important;
+  background: linear-gradient(135deg, #FF0000, #282828) !important
 }
 
-/* --- Consolidated Components --- */
-
-/* Content Section */
 .content-section {
   max-width: 800px;
   margin: 0 auto 60px;
   padding: 0 24px;
   color: var(--text-700);
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.8
 }
 
 .content-section h2 {
@@ -1779,30 +1767,29 @@ tr:hover td {
   font-size: 28px;
   color: var(--text-900);
   margin: 48px 0 20px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em
 }
 
 .content-section h3 {
   font-family: var(--font-d);
   font-size: 22px;
   color: var(--text-900);
-  margin: 32px 0 16px;
+  margin: 32px 0 16px
 }
 
 .content-section p {
-  margin-bottom: 24px;
+  margin-bottom: 24px
 }
 
 .content-section ul,
 .content-section ol {
-  margin: 0 0 24px 24px;
+  margin: 0 0 24px 24px
 }
 
 .content-section li {
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
-/* Data Table */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -1811,13 +1798,13 @@ tr:hover td {
   border: 1px solid var(--border);
   border-radius: 12px;
   background: #fff;
-  box-shadow: var(--sh-sm);
+  box-shadow: var(--sh-sm)
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 .data-table th {
@@ -1827,21 +1814,20 @@ tr:hover td {
   font-size: 14px;
   font-weight: 700;
   color: var(--text-900);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border)
 }
 
 .data-table td {
   padding: 14px 20px;
   border-bottom: 1px solid var(--border);
   font-size: 14px;
-  color: var(--text-700);
+  color: var(--text-700)
 }
 
 .data-table tr:last-child td {
-  border-bottom: none;
+  border-bottom: none
 }
 
-/* Author Box */
 .author-box {
   background: var(--bg2);
   border: 1px solid var(--border);
@@ -1850,7 +1836,7 @@ tr:hover td {
   margin-top: 60px;
   display: flex;
   gap: 24px;
-  align-items: start;
+  align-items: start
 }
 
 .author-img {
@@ -1861,44 +1847,43 @@ tr:hover td {
   display: grid;
   place-items: center;
   font-size: 28px;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
 
 .author-info h3 {
   font-family: var(--font-d);
   font-size: 18px;
   margin: 0 0 8px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .author-info p {
   font-size: 14px;
   margin: 0 0 16px;
   color: var(--text-500);
-  line-height: 1.6;
+  line-height: 1.6
 }
 
 .author-link {
   color: var(--blue);
   font-weight: 600;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14px
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
   .author-box {
     flex-direction: column;
     text-align: center;
-    align-items: center;
+    align-items: center
   }
 }
 
-/* Related Grid */
 .related-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  margin-top: 24px;
+  margin-top: 24px
 }
 
 .related-card {
@@ -1913,38 +1898,36 @@ tr:hover td {
   color: var(--text-900);
   font-weight: 600;
   transition: all 0.2s;
-  box-shadow: var(--sh-xs);
+  box-shadow: var(--sh-xs)
 }
 
 .related-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--sh-md);
   border-color: var(--blue);
-  color: var(--blue);
+  color: var(--blue)
 }
 
-/* Disclaimer */
 .disclaimer {
   font-size: 13px;
   color: var(--text-400);
   font-style: italic;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border)
 }
 
-/* FAQ Wrap */
 .faq-wrap {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 12px
 }
 
 .faq-item {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: #fff
 }
 
 .faq-q {
@@ -1961,11 +1944,11 @@ tr:hover td {
   font-weight: 600;
   color: var(--text-900);
   cursor: pointer;
-  outline: none;
+  outline: none
 }
 
 .faq-q:hover {
-  background: var(--bg2);
+  background: var(--bg2)
 }
 
 .faq-a {
@@ -1973,33 +1956,32 @@ tr:hover td {
   font-size: 15px;
   color: var(--text-700);
   line-height: 1.6;
-  display: none;
+  display: none
 }
 
 .faq-item.open .faq-a {
-  display: block;
+  display: block
 }
 
 .faq-item.open .faq-plus {
-  transform: rotate(45deg);
+  transform: rotate(45deg)
 }
 
 .faq-plus {
   transition: transform 0.3s ease;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 400
 }
 
-/* Article Specific (Generic) */
 .article-container {
   max-width: 700px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 40px 20px 80px
 }
 
 .article-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 50px
 }
 
 .article-tag {
@@ -2010,7 +1992,7 @@ tr:hover td {
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 15px
 }
 
 .article-h1 {
@@ -2018,19 +2000,19 @@ tr:hover td {
   font-size: 42px;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .article-meta {
   color: var(--text-500);
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 30px
 }
 
 .article-body {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--text-700);
+  color: var(--text-700)
 }
 
 .article-body h2 {
@@ -2038,7 +2020,7 @@ tr:hover td {
   font-size: 28px;
   margin-top: 40px;
   margin-bottom: 20px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .article-body h3 {
@@ -2046,201 +2028,192 @@ tr:hover td {
   margin-top: 30px;
   margin-bottom: 15px;
   font-weight: 600;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
-/* --- Added Utilities for Refactoring --- */
-
-/* Text Alignment */
 .text-center {
-  text-align: center;
+  text-align: center
 }
 
 .text-left {
-  text-align: left;
+  text-align: left
 }
 
 .text-decoration-none {
-  text-decoration: none;
+  text-decoration: none
 }
 
-/* Spacing */
 .mb-60 {
-  margin-bottom: 60px;
+  margin-bottom: 60px
 }
 
 .pb-80 {
-  padding-bottom: 80px;
+  padding-bottom: 80px
 }
 
 .max-w-520 {
-  max-width: 520px;
+  max-width: 520px
 }
 
 .mx-auto {
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
-/* Grid */
 .grid-auto-fill {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 22px;
+  gap: 22px
 }
 
 .grid-2-col {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr
 }
 
-/* Platform Pills */
 .pill-youtube {
-  --pill-color: #FF0000;
+  --pill-color: #FF0000
 }
 
 .pill-cpm {
-  --pill-color: #f97316;
+  --pill-color: #f97316
 }
 
 .pill-rpm {
-  --pill-color: #eab308;
+  --pill-color: #eab308
 }
 
 .pill-tiktok {
-  --pill-color: #00B4D8;
+  --pill-color: #00B4D8
 }
 
 .pill-instagram {
-  --pill-color: #E1306C;
+  --pill-color: #E1306C
 }
 
 .pill-adsense {
-  --pill-color: #4285F4;
+  --pill-color: #4285F4
 }
 
 .pill-affiliate {
-  --pill-color: #7c3aed;
+  --pill-color: #7c3aed
 }
 
 .pill-freelance {
-  --pill-color: #16a34a;
+  --pill-color: #16a34a
 }
 
-/* Card Gradients */
 .bg-gradient-yt-card {
-  background: linear-gradient(135deg, #FF0000, #FF6B35) !important;
+  background: linear-gradient(135deg, #FF0000, #FF6B35) !important
 }
 
 .bg-gradient-cpm-card {
-  background: linear-gradient(135deg, #f97316, #eab308) !important;
+  background: linear-gradient(135deg, #f97316, #eab308) !important
 }
 
 .bg-gradient-rpm-card {
-  background: linear-gradient(135deg, #eab308, #22c55e) !important;
+  background: linear-gradient(135deg, #eab308, #22c55e) !important
 }
 
 .bg-gradient-tiktok-card {
-  background: linear-gradient(135deg, #00B4D8, #EE1D52) !important;
+  background: linear-gradient(135deg, #00B4D8, #EE1D52) !important
 }
 
 .bg-gradient-insta-card {
-  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040) !important;
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040) !important
 }
 
 .bg-gradient-adsense-card {
-  background: linear-gradient(135deg, #4285F4, #34A853) !important;
+  background: linear-gradient(135deg, #4285F4, #34A853) !important
 }
 
 .bg-gradient-affiliate-card {
-  background: linear-gradient(135deg, #7c3aed, #3b82f6) !important;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6) !important
 }
 
 .bg-gradient-freelance-card {
-  background: linear-gradient(135deg, #16a34a, #0d9488) !important;
+  background: linear-gradient(135deg, #16a34a, #0d9488) !important
 }
 
 .bg-gradient-rpm-vs-cpm {
-  background: linear-gradient(135deg, #3b6ef5, #7c3aed) !important;
+  background: linear-gradient(135deg, #3b6ef5, #7c3aed) !important
 }
 
-/* Tags */
 .tag-red {
   background: #fff0f0;
-  color: #dc2626;
+  color: #dc2626
 }
 
 .tag-orange {
   background: #fff7ed;
-  color: #ea580c;
+  color: #ea580c
 }
 
 .tag-yellow {
   background: #fefce8;
-  color: #ca8a04;
+  color: #ca8a04
 }
 
 .tag-cyan {
   background: #f0fdfe;
-  color: #0891b2;
+  color: #0891b2
 }
 
 .tag-pink {
   background: #fdf2f8;
-  color: #db2777;
+  color: #db2777
 }
 
 .tag-blue {
   background: #eff6ff;
-  color: #2563eb;
+  color: #2563eb
 }
 
 .tag-purple {
   background: #f5f3ff;
-  color: #7c3aed;
+  color: #7c3aed
 }
 
 .tag-green {
   background: #f0fdf4;
-  color: #16a34a;
+  color: #16a34a
 }
 
-/* Blog Components */
 .callout {
   background: #f8fafc;
   border-left: 4px solid var(--blue);
   padding: 25px;
   border-radius: 8px;
-  margin: 30px 0;
+  margin: 30px 0
 }
 
 .cta-box {
   background: linear-gradient(135deg, #1e293b, #0f172a);
-  color: white;
+  color: #fff;
   padding: 40px;
   border-radius: 16px;
   text-align: center;
-  margin: 60px 0;
+  margin: 60px 0
 }
 
 .cta-box h3 {
-  color: white;
-  margin-top: 0;
+  color: #fff;
+  margin-top: 0
 }
 
 .cta-btn {
   display: inline-block;
   background: var(--blue);
-  color: white;
+  color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   margin-top: 20px;
-  transition: transform 0.2s;
+  transition: transform 0.2s
 }
 
 .cta-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px)
 }
 
 .newsletter-widget {
@@ -2249,7 +2222,7 @@ tr:hover td {
   padding: 40px;
   margin-top: 60px;
   text-align: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e2e8f0
 }
 
 .newsletter-input-group {
@@ -2257,11 +2230,11 @@ tr:hover td {
   gap: 10px;
   justify-content: center;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .blog-section-header {
-  margin-top: 80px;
+  margin-top: 80px
 }
 
 .flex-wrap-header {
@@ -2270,7 +2243,7 @@ tr:hover td {
   justify-content: space-between;
   margin-bottom: 32px;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 12px
 }
 
 .section-h2 {
@@ -2278,14 +2251,14 @@ tr:hover td {
   font-size: 32px;
   font-weight: 700;
   color: var(--text-900);
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .section-p {
   color: var(--text-500);
   font-size: 16px;
   max-width: 520px;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .blog-header-h2 {
@@ -2293,15 +2266,14 @@ tr:hover td {
   font-size: 28px;
   font-weight: 700;
   color: var(--text-900);
-  margin-bottom: 6px;
+  margin-bottom: 6px
 }
 
-/* Newsletter Components */
 .newsletter-h2 {
   font-family: var(--font-d);
   margin-bottom: 10px;
   font-size: 24px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .newsletter-p {
@@ -2309,26 +2281,26 @@ tr:hover td {
   margin-bottom: 20px;
   max-width: 400px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 .newsletter-input {
   padding: 12px;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
-  width: 100%;
+  width: 100%
 }
 
 .whitespace-nowrap {
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 .max-w-400 {
-  max-width: 400px;
+  max-width: 400px
 }
 
 .w-full {
-  width: 100%;
+  width: 100%
 }
 
 .recommended-reading {
@@ -2339,80 +2311,77 @@ tr:hover td {
   margin-bottom: 20px;
   border-top: 1px solid var(--border);
   padding-top: 40px;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
   margin: 30px 0;
-  font-size: 16px;
+  font-size: 16px
 }
 
 .comparison-table th,
 .comparison-table td {
   border: 1px solid #e2e8f0;
   padding: 15px;
-  text-align: left;
+  text-align: left
 }
 
 .comparison-table th {
   background: #f1f5f9;
-  color: var(--text-900);
+  color: var(--text-900)
 }
 
-/* Legal & Contact Utilities */
 .page-lead {
   color: var(--text-500);
   font-size: 16px;
   margin-bottom: 36px;
-  max-width: 620px;
+  max-width: 620px
 }
 
 .bg-blue-l {
-  background: var(--blue-l);
+  background: var(--blue-l)
 }
 
 .bg-green-l {
-  background: var(--green-l);
+  background: var(--green-l)
 }
 
 .bg-purple-l {
-  background: var(--purple-l);
+  background: var(--purple-l)
 }
 
 .bg-orange-l {
-  background: var(--orange-l);
+  background: var(--orange-l)
 }
 
-/* Feature Cards (About Page) */
 .feature-card {
-  padding: 28px;
+  padding: 28px
 }
 
 .feature-icon {
   font-size: 36px;
-  margin-bottom: 14px;
+  margin-bottom: 14px
 }
 
 .feature-title {
   font-family: var(--font-d);
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .feature-text {
   color: var(--text-500);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.7
 }
 
-/* Calculator Grid (About Page) */
 .calc-grid-small {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
+  gap: 12px
 }
 
 .calc-link {
@@ -2427,50 +2396,49 @@ tr:hover td {
   color: var(--text-700);
   font-weight: 600;
   font-size: 13px;
-  transition: all .2s;
+  transition: all .2s
 }
 
 .calc-link:hover {
   background: var(--bg2);
   transform: translateY(-2px);
-  border-color: var(--blue-m);
+  border-color: var(--blue-m)
 }
 
 .card-h3 {
   font-family: var(--font-d);
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .p-32 {
-  padding: 32px;
+  padding: 32px
 }
 
 .mb-40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px
 }
 
 .mb-48 {
-  margin-bottom: 48px;
+  margin-bottom: 48px
 }
 
 .grid-2-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr
 }
 
 .gap-24 {
-  gap: 24px;
+  gap: 24px
 }
 
-/* Alert Utilities */
 .alert-warning {
   background: var(--yellow-l);
   border: 1px solid #fef08a;
   border-radius: 14px;
   padding: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 32px
 }
 
 .alert-title {
@@ -2478,31 +2446,24 @@ tr:hover td {
   font-size: 18px;
   font-weight: 700;
   color: #92400e;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .alert-text {
   color: #92400e;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.7
 }
 
-/* 
-   ────────────────────────────────────────────────────────────────
-   CALCULATOR SPECIFIC STYLES (Synced from Creator Hub)
-   ────────────────────────────────────────────────────────────────
-*/
-
-/* ── FORM ELEMENTS ── */
 .range-group {
-  margin-bottom: 18px;
+  margin-bottom: 18px
 }
 
 .range-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
 .range-val {
@@ -2513,7 +2474,7 @@ tr:hover td {
   background: var(--blue-l);
   border: 1px solid var(--blue-m);
   padding: 2px 10px;
-  border-radius: 6px;
+  border-radius: 6px
 }
 
 input[type="range"] {
@@ -2526,7 +2487,7 @@ input[type="range"] {
   outline: none;
   cursor: pointer;
   border: none;
-  padding: 0;
+  padding: 0
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -2537,16 +2498,16 @@ input[type="range"]::-webkit-slider-thumb {
   border: 2.5px solid var(--blue);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(79, 126, 248, 0.3);
-  transition: transform var(--tr);
+  box-shadow: 0 2px 8px rgb(79 126 248 / .3);
+  transition: transform var(--tr)
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.2)
 }
 
 .prefix-wrap {
-  position: relative;
+  position: relative
 }
 
 .prefix {
@@ -2558,44 +2519,43 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 13px;
   color: var(--text-400);
   pointer-events: none;
-  z-index: 1;
+  z-index: 1
 }
 
 .prefix-wrap input {
-  padding-left: 28px;
+  padding-left: 28px
 }
 
 .input-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 12px
 }
 
-@media (max-width: 400px) {
+@media (max-width:400px) {
   .input-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 }
 
-/* ── CARD GRID ── */
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr
 }
 
-@media (max-width: 680px) {
+@media (max-width:680px) {
   .card-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 
   .card-right {
     border-left: none !important;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--border)
   }
 }
 
 .card-left {
-  padding: 32px;
+  padding: 32px
 }
 
 .card-right {
@@ -2604,23 +2564,22 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 16px
 }
 
-@media (max-width: 680px) {
+@media (max-width:680px) {
 
   .card-left,
   .card-right {
-    padding: 20px;
+    padding: 20px
   }
 }
 
-/* ── SECTION HEAD ── */
 .section-head {
   display: flex;
   align-items: flex-start;
   gap: 18px;
-  margin-bottom: 28px;
+  margin-bottom: 28px
 }
 
 .section-icon-wrap {
@@ -2632,7 +2591,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   justify-content: center;
   font-size: 24px;
   flex-shrink: 0;
-  box-shadow: var(--sh-md);
+  box-shadow: var(--sh-md)
 }
 
 .section-title {
@@ -2640,63 +2599,62 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 24px;
   font-weight: 700;
   color: var(--text-900);
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
 .new-badge {
   display: inline-block;
   background: linear-gradient(135deg, #f97316, #eab308);
-  color: white;
+  color: #fff;
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   padding: 2px 8px;
   border-radius: 4px;
   margin-left: 10px;
   vertical-align: middle;
-  text-transform: uppercase;
+  text-transform: uppercase
 }
 
 .section-desc {
   font-size: 14px;
-  color: var(--text-500);
+  color: var(--text-500)
 }
 
-/* ── OUTPUT & BREAKDOWN ── */
 .output-label {
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
+  color: rgb(255 255 255 / .7);
+  margin-bottom: 8px
 }
 
 .output-value {
   font-family: var(--font-d);
   font-size: 44px;
   font-weight: 700;
-  color: white;
+  color: #fff;
   line-height: 1;
-  letter-spacing: -0.02em;
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: -.02em;
+  transition: all 0.35s cubic-bezier(.34, 1.56, .64, 1)
 }
 
 .output-value.pop {
-  transform: scale(1.06);
+  transform: scale(1.06)
 }
 
 .output-sub {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / .65);
   margin-top: 6px;
-  font-weight: 500;
+  font-weight: 500
 }
 
 .breakdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 10px
 }
 
 .bd-item {
@@ -2705,11 +2663,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-radius: 12px;
   padding: 14px 16px;
   box-shadow: var(--sh-xs);
-  transition: box-shadow var(--tr);
+  transition: box-shadow var(--tr)
 }
 
 .bd-item:hover {
-  box-shadow: var(--sh-md);
+  box-shadow: var(--sh-md)
 }
 
 .bd-val {
@@ -2717,18 +2675,17 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 19px;
   font-weight: 700;
   color: var(--text-900);
-  margin-bottom: 3px;
+  margin-bottom: 3px
 }
 
 .bd-label {
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--text-400);
+  color: var(--text-400)
 }
 
-/* ── UTILS ── */
 .formula {
   background: var(--bg2);
   border: 1px solid var(--border);
@@ -2737,12 +2694,12 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-family: var(--font-m);
   font-size: 12px;
   color: var(--text-500);
-  line-height: 1.6;
+  line-height: 1.6
 }
 
 .action-row {
   display: flex;
-  gap: 8px;
+  gap: 8px
 }
 
 .act-btn {
@@ -2754,7 +2711,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-family: var(--font-m);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
   color: var(--text-500);
   cursor: pointer;
   transition: all var(--tr);
@@ -2762,16 +2719,15 @@ input[type="range"]::-webkit-slider-thumb:hover {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  box-shadow: var(--sh-xs);
+  box-shadow: var(--sh-xs)
 }
 
 .act-btn:hover {
   border-color: var(--blue);
   color: var(--blue);
-  box-shadow: var(--sh-sm);
+  box-shadow: var(--sh-sm)
 }
 
-/* Hero YouTube Icon */
 .hero-icon {
   width: 60px;
   height: 42px;
@@ -2779,24 +2735,23 @@ input[type="range"]::-webkit-slider-thumb:hover {
   margin-right: 14px;
   position: relative;
   top: -4px;
-  display: inline-block;
+  display: inline-block
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
   .hero-icon {
     width: 40px;
     height: 28px;
     margin-right: 10px;
-    top: -2px;
+    top: -2px
   }
 }
 
-/* ── NICHE BARS ── */
 .bar-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 9px;
+  margin-bottom: 9px
 }
 
 .bar-name {
@@ -2805,7 +2760,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   color: var(--text-500);
   width: 76px;
   flex-shrink: 0;
-  text-align: right;
+  text-align: right
 }
 
 .bar-track {
@@ -2813,13 +2768,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
   height: 7px;
   background: var(--bg2);
   border-radius: 4px;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .bar-fill {
   height: 100%;
   border-radius: 4px;
-  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 1s cubic-bezier(.4, 0, .2, 1)
 }
 
 .bar-num {
@@ -2827,5 +2782,5 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 11px;
   color: var(--text-500);
   width: 46px;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
