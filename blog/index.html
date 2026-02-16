@@ -46,22 +46,36 @@
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "IncomeFromViews Blog",
-      "url": "https://incomefromviews.com/blog/",
-      "description": "Guides and strategies for content creators to maximize their earnings.",
-      "publisher": {
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
         "@type": "Organization",
+        "@id": "https://incomefromviews.com/#organization",
         "name": "IncomeFromViews",
+        "url": "https://incomefromviews.com",
         "logo": {
           "@type": "ImageObject",
           "url": "https://incomefromviews.com/logo.svg"
         }
+      },
+
+      {
+        "@type": "Blog",
+        "@id": "https://incomefromviews.com/blog/#blog",
+        "name": "IncomeFromViews Blog",
+        "url": "https://incomefromviews.com/blog/",
+        "description": "Guides and strategies for content creators to maximize their earnings.",
+        "publisher": {
+          "@id": "https://incomefromviews.com/#organization"
+        }
       }
-    }
+
+    ]
+  }
   </script>
+
 </head>
 
 <body>
@@ -95,6 +109,28 @@
   </section>
 
   <div class="container pb-80">
+    <!-- Featured Pillar Article -->
+    <div class="featured-pillar card p-32 mb-48">
+      <span class="blog-tag tag-red">ULTIMATE GUIDE</span>
+      <h2>
+        <a href="/blog/how-to-earn-money-on-youtube/" class="text-decoration-none">
+          How to Earn Money on YouTube in 2026 (Complete Beginner Guide)
+        </a>
+      </h2>
+      <p>
+        The complete YouTube monetization blueprint covering RPM vs CPM,
+        monetization requirements, highest paying niches, income streams,
+        and realistic earning timelines.
+      </p>
+      <p class="small-muted">
+        Part of our YouTube Earnings Series.
+      </p>
+      <br>
+      <a href="/blog/how-to-earn-money-on-youtube/" class="btn-primary" style="text-decoration: none;">
+        Read Full Guide →
+      </a>
+    </div>
+
 
     <div class="blog-grid">
 

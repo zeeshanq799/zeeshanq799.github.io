@@ -1582,6 +1582,23 @@ tr:hover td {
   color: var(--blue)
 }
 
+.internal-hub-links {
+  background: #f8fafc;
+  padding: 20px;
+  margin: 20px 0 30px;
+  border-left: 4px solid #3B82F6;
+}
+
+.internal-hub-links ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.internal-hub-links li {
+  margin-bottom: 8px;
+}
+
+
 @media(max-width:780px) {
   .menu-btn {
     display: block
