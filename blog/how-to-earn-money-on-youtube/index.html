@@ -66,25 +66,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://incomefromviews.com/#organization",
-      "name": "IncomeFromViews",
-      "url": "https://incomefromviews.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://incomefromviews.com/logo.svg"
-      }
-    },
-
-    {
-      "@type": "Person",
-      "@id": "https://incomefromviews.com/about/#person",
-      "name": "Zeeshan",
-      "url": "https://incomefromviews.com/about/",
-      "worksFor": {
-        "@id": "https://incomefromviews.com/#organization"
-      }
+    "author": {
+    "@type": "Organization",
+    "@id": "https://incomefromviews.com/#organization"
     },
     {
       "@type": "BlogPosting",
@@ -120,11 +104,12 @@
         {"@type": "WebSite", "name": "Google AdSense", "url": "https://adsense.google.com"}
       ],
       "author": {
-        "@id": "https://incomefromviews.com/about/#person"
+        "@type": "Organization",
+        "@id": "https://incomefromviews.com/#organization"
       },
       "publisher": {
         "@id": "https://incomefromviews.com/#organization"
-      },
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -916,15 +901,18 @@
                 results vary. See our <a href="/disclaimer/">full disclaimer</a>.</p>
 
             <div class="author-box">
-                <div class="author-img">👨‍💻</div>
+                <div class="author-img">📊</div>
                 <div class="author-info">
-                    <h3 class="mt-0">About the Author</h3>
-                    <p><strong><a href="/about/" class="author-link">Zeeshan</a></strong>is the founder of
-                        IncomeFromViews and researches YouTube monetization
-                        systems, RPM benchmarks, and creator income strategies. His work focuses on helping creators
-                        understand realistic earning potential using data-driven models.</p>
+                    <h3>About the Author</h3>
+                    <p>
+                        <strong>IncomeFromViews</strong> is a leading resource for creator
+                        economy data and monetization tools. We provide accurate calculators,
+                        guides, and strategies to help creators maximize their earnings.
+                    </p>
+                    <a href="/about/">More about IncomeFromViews →</a>
                 </div>
             </div>
+
 
         </div>
 
