@@ -250,11 +250,22 @@
               <input type="range" id="ytTax" min="0" max="55" value="25"
                 oninput="updateLbl('ytTaxLbl',this.value+'%');calcYT()">
             </div>
+            <p class="auto-note">
+              💡 Adjust values — results update automatically.
+            </p>
 
             <button class="btn-primary" onclick="calcYT()">⚡ Calculate Earnings</button>
             <button class="btn-ghost"
               onclick="resetForm(['ytViews','ytCPM','ytMon','ytViews2','ytRPM'],['ytShorts','ytShortsLbl','20%'],['ytTax','ytTaxLbl','25%']);calcYT()">↺
               Reset</button>
+            <div class="insight-box" id="ytInsightBox" style="margin-top:20px;display:none;">
+              <div style="font-weight:600;margin-bottom:8px;">📊 Earnings Insight</div>
+              <div id="ytInsightText" style="font-size:0.95rem;color:var(--text-600);"></div>
+            </div>
+            <div class="goal-box" style="margin-top:20px;">
+              <div style="font-weight:600;margin-bottom:8px;">🎯 Income Goals</div>
+              <div id="ytGoals" style="font-size:0.9rem;color:var(--text-600);"></div>
+            </div>
           </div>
 
           <div class="card-right">
@@ -287,6 +298,16 @@
               <button class="act-btn" onclick="dlTxt('YouTube Earnings')">↓ Export</button>
               <button class="act-btn" onclick="shareIt()">⤴ Share</button>
             </div>
+            <div style="margin-top:20px;">
+              <div style="font-weight:600;margin-bottom:6px;">🌍 Compare Audience Impact</div>
+              <div style="display:flex;">
+                <button onclick="quickCountry(3.2)" class="act-btn">USA</button>
+                <button onclick="quickCountry(2.8)" class="act-btn">UK</button>
+                <button onclick="quickCountry(0.4)" class="act-btn">India</button>
+              </div>
+            </div>
+
+
           </div>
         </div>
         <div class="faq-wrap">
@@ -700,7 +721,62 @@
       set('ytShortsRev', fmt(shortsMonthly));
       const formEl = document.getElementById('ytFormula');
       if (formEl) formEl.textContent = fml;
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'calculator_interaction', {
+          event_category: 'engagement',
+          event_label: 'youtube_calculator_used'
+        });
+      }
+
+      generateInsight(monthly, adjDaily);
+      generateGoals(monthly);
+
     }
+    function generateInsight(monthly, daily) {
+      const box = document.getElementById('ytInsightBox');
+      const txt = document.getElementById('ytInsightText');
+
+      let message = '';
+
+      if (monthly < 200) {
+        message = 'You are currently in the early-stage creator range. Increasing daily views to 25,000 could significantly boost income.';
+      }
+      else if (monthly < 1000) {
+        message = 'You are in the growing creator tier. Reaching 40K daily views could push you past $1,000/month.';
+      }
+      else if (monthly < 5000) {
+        message = 'You are in the mid-tier income range. Optimizing CPM or targeting US audience can increase revenue by 30–50%.';
+      }
+      else {
+        message = 'You are operating at a professional creator level. Diversifying with sponsorships could double total earnings.';
+      }
+
+      txt.textContent = message;
+      box.style.display = 'block';
+
+      if (monthly > 1000) {
+        box.style.background = 'linear-gradient(135deg,#fff7e6,#fff)';
+      }
+
+    }
+    function generateGoals(monthly) {
+      const rpmEst = 4; // assumed average RPM
+      const goalEl = document.getElementById('ytGoals');
+
+      const need1k = Math.ceil((1000 / rpmEst) * 1000 / 30);
+      const need5k = Math.ceil((5000 / rpmEst) * 1000 / 30);
+
+      goalEl.innerHTML = `
+        To earn <strong>$1,000/month</strong> → ~${need1k.toLocaleString()} daily views<br>
+        To earn <strong>$5,000/month</strong> → ~${need5k.toLocaleString()} daily views
+      `;
+    }
+
+    function quickCountry(multiplier) {
+      document.getElementById('ytCountry').value = multiplier;
+      calcYT();
+    }
+
 
     // Reset Form Helper
     function resetForm(ids, ...defs) {
@@ -717,6 +793,32 @@
     }
 
     document.addEventListener('DOMContentLoaded', calcYT);
+    const calcBtn = document.querySelector('.btn-primary');
+
+    if (calcBtn) {
+      calcBtn.addEventListener('click', function () {
+        this.classList.add('loading');
+        this.innerHTML = '⏳ Calculating...';
+
+        setTimeout(() => {
+          this.classList.remove('loading');
+          this.innerHTML = '⚡ Calculate Earnings';
+        }, 400);
+      });
+    }
+
+    setTimeout(() => {
+      const box = document.createElement('div');
+      box.style.marginTop = '20px';
+      box.innerHTML = `
+        <div style="padding:12px;background:#f5f7fa;border-radius:8px;font-size:0.9rem;">
+          📈 Want to increase your CPM? 
+          <a href="/blog/youtube-cpm-guide/">Read our full YouTube CPM Guide →</a>
+        </div>
+      `;
+      document.querySelector('.card-right').appendChild(box);
+    }, 10000);
+
   </script>
 </body>
 
