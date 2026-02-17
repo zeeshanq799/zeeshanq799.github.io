@@ -168,7 +168,18 @@
                 <p>What <strong>you receive</strong> per 1,000 views. After YouTube's 45% revenue share cut.</p>
               </div>
             </div>
-            <button class="btn-primary" style="margin-top:16px" onclick="calcRPM()">⚡ Calculate RPM</button>
+            <p class="auto-note" style="margin-top: 16px;">
+              💡 Adjust values — results update automatically.
+            </p>
+            <button class="btn-primary" onclick="calcRPM()">⚡ Calculate RPM</button>
+            <button class="btn-ghost" onclick="resetForm()">
+              ↺ Reset
+            </button>
+            <div style="margin-top:16px;">
+              <a href="/youtube-earnings-calculator/" class="cta-mini" style="text-decoration: none;">
+                👉 Calculate how much you’d earn with this RPM →
+              </a>
+            </div>
           </div>
           <div class="card-right">
             <div class="output-hero" style="background:linear-gradient(135deg,#eab308,#22c55e)">
@@ -527,6 +538,22 @@
       }
     }
     document.addEventListener('DOMContentLoaded', calcRPM);
+    function resetForm() {
+      // Reset to original defaults
+      document.getElementById('rpmRev').value = 280;
+      document.getElementById('rpmViews').value = 200000;
+
+      // Recalculate automatically
+      calcRPM();
+
+      // Optional small visual feedback
+      const btn = document.querySelector('.btn-ghost');
+      btn.textContent = "✓ Reset";
+      setTimeout(() => {
+        btn.textContent = "↺ Reset";
+      }, 1200);
+    }
+
   </script>
 </body>
 

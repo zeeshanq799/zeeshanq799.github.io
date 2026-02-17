@@ -266,6 +266,7 @@
               <div style="font-weight:600;margin-bottom:8px;">🎯 Income Goals</div>
               <div id="ytGoals" style="font-size:0.9rem;color:var(--text-600);"></div>
             </div>
+
           </div>
 
           <div class="card-right">
@@ -306,7 +307,16 @@
                 <button onclick="quickCountry(0.4)" class="act-btn">India</button>
               </div>
             </div>
-
+            <div style="margin-top:16px;">
+              <a href="/youtube-cpm-calculator/" class="cta-mini" style="text-decoration: none;">
+                👉 Calculate your precise Cost Per Mille (CPM) →
+              </a>
+            </div>
+            <div>
+              <a href="/youtube-rpm-calculator/" class="cta-mini" style="text-decoration: none;">
+                👉 Calculate your precise Revenue Per Mille (RPM) →
+              </a>
+            </div>
 
           </div>
         </div>
@@ -790,6 +800,13 @@
         if (el) el.value = el.defaultValue || 0;
         if (lbl) lbl.textContent = val;
       });
+
+      // Optional small visual feedback
+      const btn = document.querySelector('.btn-ghost');
+      btn.textContent = "✓ Reset";
+      setTimeout(() => {
+        btn.textContent = "↺ Reset";
+      }, 1200);
     }
 
     document.addEventListener('DOMContentLoaded', calcYT);

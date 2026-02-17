@@ -186,7 +186,19 @@
                 <option value="0.45">🇳🇬 Nigeria (×0.45)</option>
               </select>
             </div>
+            <p class="auto-note">
+              💡 Adjust values — results update automatically.
+            </p>
             <button class="btn-primary" onclick="calcCPM()">⚡ Calculate CPM</button>
+            <button class="btn-ghost" onclick="resetForm()">
+              ↺ Reset
+            </button>
+            <div style="margin-top:16px;">
+              <a href="/youtube-earnings-calculator/" class="cta-mini" style="text-decoration: none;">
+                👉 Calculate how much you’d earn with this CPM →
+              </a>
+            </div>
+
           </div>
           <div class="card-right">
             <div class="output-hero" style="background:linear-gradient(135deg,#f97316,#eab308)">
@@ -767,16 +779,6 @@
         set('cpmResult', '$0.00');
       }
 
-      // Base Data (Global/US baseline roughly aligns with x3.2 multiplier logic inverted or raw)
-      // Actually, let's assume the base data below is for HIGH TIER (US).
-      // If US is x3.2, then Global(x1) would be much lower. 
-      // The previous data was: Finance 35. If US is 3.2, then Base (Global) ~11.
-      // However, to keep it simple and consistent with the user's likely expectation that "US = High Numbers",
-      // let's treat the data below as "Base x 10" or just standard rates and scale them.
-      // Better yet: define base rates for US (since that's the default view) and scale DOWN for others.
-      // US Multiplier = 3.2. So Base = Value / 3.2.
-      // Comparison Value = Base * SelectedMultiplier.
-
       // Raw US Averages (approximate)
       const usData = [
         ['Finance', 35, '#22c55e', 'finance'],
@@ -829,6 +831,34 @@
       }
     }
     document.addEventListener('DOMContentLoaded', calcCPM);
+
+    // Reset Form Helper
+    function resetForm() {
+      document.getElementById('cpmEarn').value = 500;
+      document.getElementById('cpmViews').value = 50000;
+      document.getElementById('cpmNiche').value = 'gaming';
+      document.getElementById('cpmCountry').value = '3.2';
+      calcCPM();
+      // Optional small visual feedback
+      const btn = document.querySelector('.btn-ghost');
+      btn.textContent = "✓ Reset";
+      setTimeout(() => {
+        btn.textContent = "↺ Reset";
+      }, 1200);
+    }
+    const calcBtn = document.querySelector('.btn-primary');
+
+    if (calcBtn) {
+      calcBtn.addEventListener('click', function () {
+        this.classList.add('loading');
+        this.innerHTML = '⏳ Calculating...';
+
+        setTimeout(() => {
+          this.classList.remove('loading');
+          this.innerHTML = '⚡ Calculate Earnings';
+        }, 400);
+      });
+    }
   </script>
 </body>
 
