@@ -124,7 +124,19 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://incomefromviews.com/blog/youtube-rpm-by-country/</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+  <url>
+    <loc>https://incomefromviews.com/blog/how-much-does-youtube-pay-per-1000-views/</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://incomefromviews.com/blog/youtube-cpm-guide/</loc>
     <lastmod>2026-02-14</lastmod>
