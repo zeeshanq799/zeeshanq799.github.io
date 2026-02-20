@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script>
+        if (location.hostname.includes("incomefromviews.com")) {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-S6VK537JGM";
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-S6VK537JGM');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E4405F">
+    <title>Instagram Engagement Rate Calculator (Free 2026 Tool)</title>
+    <meta name="description"
+        content="Calculate your Instagram engagement rate instantly. Enter likes, comments, saves, and followers to see if your engagement is good, average, or viral in 2026.">
+    <link rel="canonical" href="https://incomefromviews.com/instagram-engagement-rate-calculator/">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Instagram Engagement Rate Calculator 2026">
+    <meta property="og:description"
+        content="Calculate Instagram engagement rate. Free tool to check if your engagement is good or viral.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://incomefromviews.com/instagram-engagement-rate-calculator/">
+    <meta property="og:image" content="https://incomefromviews.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Engagement Rate Calculator">
+    <meta name="twitter:description"
+        content="Calculate your Instagram engagement rate. See if your engagement is good, average, or viral.">
+    <meta name="twitter:image" content="https://incomefromviews.com/assets/og-image.png">
+
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Instagram Engagement Rate Calculator 2026",
+          "url": "https://incomefromviews.com/instagram-engagement-rate-calculator/",
+          "description": "Calculate Instagram engagement rate by followers and reach. Includes engagement scoring and brand quality indicators.",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript enabled",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "author": {
+            "@type": "Organization",
+            "name": "IncomeFromViews"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://incomefromviews.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Instagram Engagement Calculator", "item": "https://incomefromviews.com/instagram-engagement-rate-calculator/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a good Instagram engagement rate?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Good Instagram engagement rate is 3-6%. Average is 1-3%. Excellent is 6-10%. Anything above 10% is viral-level engagement. Rates below 1% indicate low audience connection." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you calculate Instagram engagement rate?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Engagement Rate = (Likes + Comments + Saves + Shares) ÷ Followers × 100. Example: (2,000 + 150 + 50 + 30) ÷ 50,000 × 100 = 4.46% engagement rate." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is 3% engagement rate good on Instagram?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, 3% is considered good engagement on Instagram. It's above average (1-3%) and indicates solid audience connection. Brands view 3%+ as quality accounts worth sponsorship investment." }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+    <style>
+        .engagement-badge {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-align: center;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .badge-very-low {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 2px solid #ef4444;
+        }
+
+        .badge-average {
+            background: #fef3c7;
+            color: #92400e;
+            border: 2px solid #f59e0b;
+        }
+
+        .badge-good {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 2px solid #3b82f6;
+        }
+
+        .badge-excellent {
+            background: #d1fae5;
+            color: #065f46;
+            border: 2px solid #10b981;
+        }
+
+        .badge-viral {
+            background: #e0e7ff;
+            color: #3730a3;
+            border: 2px solid #6366f1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="progress"></div>
+    <nav aria-label="Main Navigation">
+        <a class="nav-logo" href="/">
+            <img src="/logo.svg" alt="IncomeFromViews Logo" class="nav-logo-img" width="36" height="36">
+            <span class="nav-logo-text">Income<em>FromViews</em></span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="/youtube-earnings-calculator/">YouTube</a>
+            <a class="nav-link" href="/youtube-cpm-calculator/">CPM</a>
+            <a class="nav-link" href="/youtube-rpm-calculator/">RPM</a>
+            <a class="nav-link" href="/tiktok-earnings-calculator/">TikTok</a>
+            <a class="nav-link" href="/instagram-earnings-calculator/">Instagram</a>
+            <a class="nav-link" href="/adsense-revenue-calculator/">AdSense</a>
+            <a class="nav-link" href="/affiliate-earnings-calculator/">Affiliate</a>
+            <a class="nav-link" href="/freelance-income-calculator/">Freelance</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+        </div>
+        <a class="nav-cta" href="/#calculators" aria-label="Explore creator earnings calculators">Explore
+            Calculators</a>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <div class="hero-badge anim-1">📈 Engagement Calculator</div>
+            <h1 class="hero-h1 anim-2">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="hero-icon">
+                    <defs>
+                        <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#833AB4;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#E1306C;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FD1D1D;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="12" fill="url(#igGrad)" />
+                    <circle cx="24" cy="24" r="10" stroke="white" stroke-width="3" fill="none" />
+                    <circle cx="35" cy="13" r="3" fill="white" />
+                </svg>
+                Instagram Engagement Rate Calculator<br><span class="grad">Check If Your Engagement Is Good</span>
+            </h1>
+            <div class="page-updated anim-3">Last Updated: February 2026</div>
+            <p class="hero-sub anim-4" style="max-width: 950px;">Calculate your Instagram engagement rate instantly.
+                Enter likes, comments, saves, and followers to see if your engagement is good, average, or viral.
+                Includes brand quality indicators and sponsorship pricing insights.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="calc-section" id="instagram">
+            <div class="card">
+                <div class="card-grid">
+                    <div class="card-left">
+
+                        <div class="form-group">
+                            <label>Total Followers</label>
+                            <input type="number" id="followers" value="50000" step="100" oninput="calcEngagement()">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Likes</label>
+                            <input type="number" id="likes" value="2000" step="10" oninput="calcEngagement()">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Comments</label>
+                            <input type="number" id="comments" value="150" step="5" oninput="calcEngagement()">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Saves</label>
+                            <input type="number" id="saves" value="50" step="5" oninput="calcEngagement()">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Shares</label>
+                            <input type="number" id="shares" value="30" step="5" oninput="calcEngagement()">
+                        </div>
+
+                        <div class="form-group"
+                            style="display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem;">
+                            <input type="checkbox" id="includeReach" onchange="toggleReach()"
+                                style="width: auto; margin: 0;">
+                            <label for="includeReach" style="margin: 0; cursor: pointer;">Calculate by Reach (for
+                                Reels)</label>
+                        </div>
+
+                        <div class="form-group" id="reachGroup" style="display:none;">
+                            <label>Reach <span class="tip-wrap"><span class="tip-icon">i</span><span
+                                        class="tip-text">Unique accounts who saw your post.</span></span></label>
+                            <input type="number" id="reach" value="150000" step="1000" oninput="calcEngagement()">
+                        </div>
+
+                        <p class="auto-note">
+                            💡 Get stats from Instagram Insights for accurate results.
+                        </p>
+
+                        <button class="btn-primary" onclick="calcEngagement()">⚡ Calculate Engagement</button>
+                        <button class="btn-ghost"
+                            onclick="resetForm(['followers','likes','comments','saves','shares','reach']);calcEngagement()">↺
+                            Reset</button>
+
+                    </div>
+
+                    <div class="card-right">
+                        <div class="output-hero bg-gradient-yt-card">
+                            <div class="output-label">Engagement Rate</div>
+                            <div class="output-value" id="engagementRate">0%</div>
+                            <div class="output-sub">by followers</div>
+                        </div>
+
+                        <!-- Engagement Badge -->
+                        <div id="engagementBadge" class="engagement-badge badge-average">
+                            Rating: Average
+                        </div>
+
+                        <div class="breakdown">
+                            <div class="bd-item">
+                                <div class="bd-val" id="totalEngagements">0</div>
+                                <div class="bd-label">Total Engagements</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="engagementByReach">N/A</div>
+                                <div class="bd-label">By Reach</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="likesPercent">0%</div>
+                                <div class="bd-label">Likes %</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="commentsPercent">0%</div>
+                                <div class="bd-label">Comments %</div>
+                            </div>
+                        </div>
+
+                        <div class="breakdown">
+                            <div class="bd-item">
+                                <div class="bd-val" id="savesPercent">0%</div>
+                                <div class="bd-label">Saves %</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="sharesPercent">0%</div>
+                                <div class="bd-label">Shares %</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="qualityScore">0/10</div>
+                                <div class="bd-label">Quality Score</div>
+                            </div>
+                            <div class="bd-item">
+                                <div class="bd-val" id="brandValue">Standard</div>
+                                <div class="bd-label">Brand Value</div>
+                            </div>
+                        </div>
+
+                        <div class="formula" id="engFormula">ER = (Likes + Comments + Saves + Shares) ÷ Followers × 100
+                        </div>
+
+                        <!-- Sponsorship Indicator -->
+                        <div
+                            style="margin-top:20px;padding:16px;background:#eff6ff;border:2px solid #3B82F6;border-radius:8px;">
+                            <div style="font-weight:700;margin-bottom:12px;color:#1e40af;">💰 Sponsorship Multiplier
+                            </div>
+                            <div id="sponsorshipIndicator" style="font-size:0.9rem;line-height:1.8;color:#1e40af;">
+                            </div>
+                        </div>
+
+                        <div class="action-row">
+                            <button class="act-btn" onclick="copyTxt('engagementRate')">⎘ Copy</button>
+                            <button class="act-btn" onclick="dlTxt('Instagram Engagement Rate')">↓ Export</button>
+                            <button class="act-btn" onclick="shareIt()">⤴ Share</button>
+                        </div>
+
+                        <div style="margin-top:16px;">
+                            <a href="/instagram-reels-rpm-estimator/" class="cta-mini" style="text-decoration: none;">
+                                👉 Calculate Instagram Reels RPM →
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/instagram-earnings-calculator/" class="cta-mini" style="text-decoration: none;">
+                                👉 Calculate total Instagram earnings →
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="faq-wrap">
+                    <div class="faq-head">Frequently Asked Questions</div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFAQ(this)">What is a good Instagram engagement rate? <span
+                                class="faq-plus">+</span></button>
+                        <div class="faq-a">Good Instagram engagement rate is 3-6%. Average is 1-3%. Excellent is 6-10%.
+                            Anything above 10% is viral-level engagement. Rates below 1% indicate low audience
+                            connection. Engagement rate = (Likes + Comments + Saves + Shares) ÷ Followers × 100.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFAQ(this)">How do you calculate Instagram engagement rate?
+                            <span class="faq-plus">+</span></button>
+                        <div class="faq-a">Engagement Rate = (Likes + Comments + Saves + Shares) ÷ Followers × 100.
+                            Example: (2,000 + 150 + 50 + 30) ÷ 50,000 × 100 = 4.46% engagement rate. For Reels, use
+                            Engagement ÷ Reach × 100 for more accurate measurement since reach often exceeds followers.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFAQ(this)">Is 3% engagement rate good on Instagram? <span
+                                class="faq-plus">+</span></button>
+                        <div class="faq-a">Yes, 3% is considered good engagement on Instagram. It's above average (1-3%)
+                            and indicates solid audience connection. Brands view 3%+ as quality accounts worth
+                            sponsorship investment. Micro-influencers (10K-50K) often achieve 3-6% engagement rates.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFAQ(this)">Why is my Instagram engagement rate low? <span
+                                class="faq-plus">+</span></button>
+                        <div class="faq-a">Low engagement (<1%) typically results from: buying fake followers,
+                                inconsistent posting, poor content quality, wrong audience targeting, or lack of genuine
+                                interaction. Fix by: posting consistently (4-7 times weekly), using relevant hashtags,
+                                responding to comments, creating save-worthy content, and removing fake/inactive
+                                followers.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" onclick="toggleFAQ(this)">How do brands calculate engagement rate?
+                                <span class="faq-plus">+</span></button>
+                            <div class="faq-a">Brands typically calculate average engagement rate across last 10-30
+                                posts: Sum all engagements from recent posts, divide by number of posts, then divide by
+                                follower count, multiply by 100. This averages out viral posts and shows consistent
+                                performance. Brands prioritize consistent 3%+ engagement over occasional spikes.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" onclick="toggleFAQ(this)">Should I calculate engagement by followers
+                                or reach? <span class="faq-plus">+</span></button>
+                            <div class="faq-a">Use followers for consistent comparisons and standard benchmarking. Use
+                                reach for Reels, viral posts, or sponsored content where reach significantly exceeds
+                                followers. Engagement by reach provides more accurate campaign performance since it
+                                accounts for non-followers who engaged. For brand deals, provide both metrics.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" onclick="toggleFAQ(this)">Do saves and shares count as engagement?
+                                <span class="faq-plus">+</span></button>
+                            <div class="faq-a">Yes, saves and shares are high-value engagement signals. Instagram's
+                                algorithm weights saves heavily as they indicate valuable content. Shares extend reach
+                                organically. Brands value saves/shares more than likes because they demonstrate stronger
+                                intent and content quality. Include all four metrics (likes, comments, saves, shares)
+                                for accurate engagement calculation.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" onclick="toggleFAQ(this)">What engagement rate do brands look for?
+                                <span class="faq-plus">+</span></button>
+                            <div class="faq-a">Brands typically require minimum 2-3% engagement rate for sponsorships.
+                                Micro-influencers (10K-50K followers) with 4-6% engagement are highly valuable.
+                                Macro-influencers (100K-1M) averaging 2-4% are considered good. Brands prioritize
+                                engagement quality over follower count—5K followers with 5% engagement beats 50K
+                                followers with 1% engagement.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="padding-top: 60px;">
+                <p
+                    style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.05rem; color: var(--text-500); line-height: 1.6;">
+                    The Instagram Engagement Rate Calculator measures audience interaction quality by calculating
+                    engagement from likes, comments, saves, and shares relative to your follower count.
+                </p>
+            </div>
+
+            <article class="content-section">
+                <h2>What Is a Good Instagram Engagement Rate?</h2>
+                <p>Instagram engagement rate benchmarks by account size and quality:</p>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Engagement Rate</th>
+                                <th>Rating</th>
+                                <th>Brand Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>
+                                        <1%< /strong>
+                                </td>
+                                <td>Very Low</td>
+                                <td>Minimal brand interest</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1-3%</strong></td>
+                                <td>Average</td>
+                                <td>Standard sponsorship rates</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3-6%</strong></td>
+                                <td>Good</td>
+                                <td>Above-average brand value</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6-10%</strong></td>
+                                <td>Excellent</td>
+                                <td>Premium sponsorship rates</td>
+                            </tr>
+                            <tr>
+                                <td><strong>10%+</strong></td>
+                                <td>Viral</td>
+                                <td>Elite brand partnerships</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>Industry averages by account size:</strong></p>
+                <ul>
+                    <li><strong>Nano (1K-10K):</strong> 4-8% (highest engagement)</li>
+                    <li><strong>Micro (10K-50K):</strong> 3-6%</li>
+                    <li><strong>Mid-tier (50K-500K):</strong> 2-4%</li>
+                    <li><strong>Macro (500K-1M):</strong> 1.5-3%</li>
+                    <li><strong>Mega (1M+):</strong> 1-2% (lowest but highest reach)</li>
+                </ul>
+
+                <h2>How to Calculate Instagram Engagement Rate</h2>
+                <p>Three standard formulas used by marketers and brands:</p>
+
+                <h3>1. Engagement Rate by Followers (Most Common)</h3>
+                <div
+                    style="background: #f9fafb; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+                    <code style="font-size: 1.125rem; font-weight: 600; color: #1f2937;">
+          ER = (Likes + Comments + Saves + Shares) ÷ Followers × 100
+        </code>
+                </div>
+
+                <p><strong>Example:</strong></p>
+                <ul>
+                    <li>2,000 likes</li>
+                    <li>150 comments</li>
+                    <li>50 saves</li>
+                    <li>30 shares</li>
+                    <li>50,000 followers</li>
+                    <li><strong>Engagement Rate:</strong> (2,230) ÷ 50,000 × 100 = <strong>4.46%</strong></li>
+                </ul>
+
+                <h3>2. Engagement Rate by Reach (For Reels)</h3>
+                <div
+                    style="background: #f9fafb; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+                    <code style="font-size: 1.125rem; font-weight: 600; color: #1f2937;">
+          ER = (Total Engagement ÷ Reach) × 100
+        </code>
+                </div>
+
+                <p><strong>When to use:</strong> Reels, viral posts, or any content where reach significantly exceeds
+                    followers. More accurate for campaign performance since non-followers also engage.</p>
+
+                <h3>3. Average Engagement Per Post</h3>
+                <div
+                    style="background: #f9fafb; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+                    <code style="font-size: 1.125rem; font-weight: 600; color: #1f2937;">
+          Avg ER = (Sum of last 10 posts' engagement ÷ 10) ÷ Followers × 100
+        </code>
+                </div>
+
+                <p><strong>Why brands prefer this:</strong> Averages out viral spikes and shows consistent performance.
+                    One viral post doesn't represent typical engagement.</p>
+
+                <h2>How Brands Calculate Engagement</h2>
+                <p>Brand evaluation process for sponsorships:</p>
+
+                <h3>Step 1: Average Engagement Rate</h3>
+                <p>Brands analyze last 10-30 posts to calculate average engagement rate. They ignore outliers (viral
+                    posts or unusually low posts) to find consistent baseline.</p>
+
+                <h3>Step 2: Engagement Quality</h3>
+                <p>Not all engagement is equal. Brands weight actions differently:</p>
+                <ul>
+                    <li><strong>Saves:</strong> Highest value (intent to reference later)</li>
+                    <li><strong>Shares:</strong> High value (organic reach extension)</li>
+                    <li><strong>Comments:</strong> Medium-high value (active interaction)</li>
+                    <li><strong>Likes:</strong> Medium value (passive acknowledgment)</li>
+                </ul>
+
+                <h3>Step 3: Audience Authenticity</h3>
+                <p>Brands audit for fake followers using tools like HypeAuditor or Social Blade:</p>
+                <ul>
+                    <li>Sudden follower spikes (buying followers)</li>
+                    <li>High follower count with low engagement (fake followers)</li>
+                    <li>Generic/bot comments ("Nice post!", "😍😍😍")</li>
+                    <li>Follower demographics mismatch with content</li>
+                </ul>
+
+                <h3>Step 4: Sponsorship Multiplier</h3>
+                <p>How engagement affects sponsorship rates:</p>
+
+                <div class="highlight-box">
+                    <h4 class="mt-0">Engagement Rate Pricing Impact</h4>
+                    <ul>
+                        <li><strong>>6% engagement:</strong> Charge 20-40% premium above base rate</li>
+                        <li><strong>3-6% engagement:</strong> Standard market rates apply</li>
+                        <li><strong>
+                                <3% engagement:</strong> Expect 10-20% discount requests</li>
+                        <li><strong>
+                                <1% engagement:</strong> Brands may decline or request steep discounts</li>
+                    </ul>
+                    <p class="mb-0"><strong>Example:</strong> Creator with 50K followers and 5% engagement can charge
+                        $750-$1,200 per post. Same follower count with 1.5% engagement: $400-$600 per post.</p>
+                </div>
+
+                <h2>Engagement by Followers vs Reach</h2>
+                <p>Understanding when to use each metric:</p>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Use Case</th>
+                                <th>Pros</th>
+                                <th>Cons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>By Followers</strong></td>
+                                <td>Standard posts, consistency tracking</td>
+                                <td>Easy comparison, industry standard</td>
+                                <td>Doesn't account for non-follower engagement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>By Reach</strong></td>
+                                <td>Reels, viral posts, campaigns</td>
+                                <td>True campaign performance</td>
+                                <td>Harder to benchmark, varies widely</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>Pro tip:</strong> Calculate and report both metrics to brands. Show consistency (by
+                    followers) and performance (by reach).</p>
+
+                <h2>Why Engagement Matters More Than Followers</h2>
+                <p>Brands increasingly prioritize engagement over follower count:</p>
+
+                <h3>Real-World Comparison</h3>
+                <p><strong>Creator A:</strong> 100K followers, 1% engagement<br>
+                    → 1,000 interactions per post<br>
+                    → Brand value: ~$400-$600 per post</p>
+
+                <p><strong>Creator B:</strong> 10K followers, 6% engagement<br>
+                    → 600 interactions per post<br>
+                    → Brand value: ~$300-$500 per post</p>
+
+                <p><strong>Insight:</strong> Creator B earns 75-80% of Creator A's rate with 10× fewer followers due to
+                    superior engagement.</p>
+
+                <h3>Why This Happens</h3>
+                <ul>
+                    <li><strong>Fake followers:</strong> Large accounts often have 20-40% fake/inactive followers</li>
+                    <li><strong>Audience connection:</strong> Smaller accounts have stronger community bonds</li>
+                    <li><strong>ROI:</strong> Brands care about conversions, not vanity metrics</li>
+                    <li><strong>Trust:</strong> High engagement signals authentic influence</li>
+                </ul>
+
+                <div class="author-box">
+                    <div class="author-img">👨‍💻</div>
+                    <div class="author-info">
+                        <h3>About IncomeFromViews</h3>
+                        <p><strong>IncomeFromViews</strong> builds free earnings calculators and data-backed guides for
+                            the creator economy. This engagement calculator uses industry-standard formulas used by
+                            major brands and influencer marketing platforms.</p>
+                        <a href="/about/" class="author-link">More about our methodology →</a>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> Engagement rate benchmarks are based on industry averages and may
+                        vary by niche, content type, and posting frequency. Brand sponsorship multipliers are estimates
+                        based on typical market rates. Actual brand deals depend on additional factors including
+                        audience demographics, content quality, and negotiation skills.</p>
+                </div>
+
+                <h2 class="bt-1 pt-40 mt-40">Related Calculators</h2>
+                <div class="related-grid">
+                    <a href="/instagram-reels-rpm-estimator/" class="related-card"><span class="icon-lg">📊</span>
+                        Instagram Reels RPM</a>
+                    <a href="/instagram-earnings-calculator/" class="related-card"><span class="icon-lg">📸</span>
+                        Instagram Earnings</a>
+                    <a href="/youtube-earnings-calculator/" class="related-card"><span class="icon-lg">▶️</span> YouTube
+                        Earnings</a>
+                    <a href="/tiktok-earnings-calculator/" class="related-card"><span class="icon-lg">🎵</span> TikTok
+                        Earnings</a>
+                </div>
+            </article>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="/" class="logo footer-logo-flex">
+                            <img src="/logo.svg" alt="IncomeFromViews Logo" class="footer-logo-img" width="36"
+                                height="36" loading="lazy">
+                            <span class="footer-logo-text">Income<em>FromViews</em></span>
+                        </a>
+                        <p>Free, instant creator earnings calculators for YouTube, TikTok, Instagram, AdSense, Affiliate
+                            marketing
+                            and Freelancing.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Calculators</h4>
+                        <a href="/instagram-engagement-rate-calculator/">Instagram Engagement</a>
+                        <a href="/instagram-reels-rpm-estimator/">Instagram Reels RPM</a>
+                        <a href="/instagram-earnings-calculator/">Instagram Earnings</a>
+                        <a href="/youtube-earnings-calculator/">YouTube Earnings</a>
+                        <a href="/tiktok-earnings-calculator/">TikTok Earnings</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="/blog/">Blog</a>
+                        <a href="/blog/instagram-engagement/">Instagram Engagement Guide</a>
+                        <a href="/blog/instagram-money/">Instagram Earnings Guide</a>
+                        <a href="/blog/influencer-marketing/">Influencer Marketing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="/about/">About Us</a>
+                        <a href="/contact/">Contact</a>
+                        <a href="/privacy-policy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Use</a>
+                        <a href="/disclaimer/">Disclaimer</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 IncomeFromViews · All calculators are free to use</span>
+                    <div class="footer-legal">
+                        <a href="/privacy-policy/">Privacy</a>
+                        <a href="/terms/">Terms</a>
+                        <a href="/disclaimer/">Disclaimer</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/shared.js" defer></script>
+        <script defer>
+            function toggleReach() {
+                const checkbox = document.getElementById('includeReach');
+                const reachGroup = document.getElementById('reachGroup');
+                reachGroup.style.display = checkbox.checked ? 'block' : 'none';
+                calcEngagement();
+            }
+
+            function calcEngagement() {
+                const followers = v('followers');
+                const likes = v('likes');
+                const comments = v('comments');
+                const saves = v('saves');
+                const shares = v('shares');
+                const includeReach = document.getElementById('includeReach').checked;
+                const reach = includeReach ? v('reach') : 0;
+
+                // Calculate total engagements
+                const totalEngagements = likes + comments + saves + shares;
+
+                // Engagement rate by followers
+                const engagementRate = followers > 0 ? (totalEngagements / followers) * 100 : 0;
+
+                // Engagement rate by reach
+                const engagementByReach = reach > 0 ? (totalEngagements / reach) * 100 : 0;
+
+                // Percentage breakdown
+                const likesPercent = totalEngagements > 0 ? (likes / totalEngagements) * 100 : 0;
+                const commentsPercent = totalEngagements > 0 ? (comments / totalEngagements) * 100 : 0;
+                const savesPercent = totalEngagements > 0 ? (saves / totalEngagements) * 100 : 0;
+                const sharesPercent = totalEngagements > 0 ? (shares / totalEngagements) * 100 : 0;
+
+                // Quality score (0-10) - weighted: saves 40%, shares 30%, comments 20%, likes 10%
+                const qualityScore = ((savesPercent * 0.4) + (sharesPercent * 0.3) + (commentsPercent * 0.2) + (likesPercent * 0.1)) / 10;
+
+                // Determine rating and brand value
+                let rating, badgeClass, brandValue, multiplier;
+                if (engagementRate < 1) {
+                    rating = "Very Low";
+                    badgeClass = "badge-very-low";
+                    brandValue = "Minimal";
+                    multiplier = "Brands may decline or request steep discounts (20-40% below standard rates).";
+                } else if (engagementRate < 3) {
+                    rating = "Average";
+                    badgeClass = "badge-average";
+                    brandValue = "Standard";
+                    multiplier = "You can charge standard market rates based on follower count.";
+                } else if (engagementRate < 6) {
+                    rating = "Good";
+                    badgeClass = "badge-good";
+                    brandValue = "Above Average";
+                    multiplier = "You can charge 10-20% premium above standard rates.";
+                } else if (engagementRate < 10) {
+                    rating = "Excellent";
+                    badgeClass = "badge-excellent";
+                    brandValue = "Premium";
+                    multiplier = "You can charge 20-40% premium above standard rates. Your engagement is highly valuable to brands.";
+                } else {
+                    rating = "Viral";
+                    badgeClass = "badge-viral";
+                    brandValue = "Elite";
+                    multiplier = "You can charge 30-50% premium above standard rates. Elite tier engagement commands premium partnerships.";
+                }
+
+                // Display results
+                set('engagementRate', engagementRate.toFixed(2) + '%');
+                set('totalEngagements', totalEngagements.toLocaleString());
+                set('engagementByReach', includeReach ? engagementByReach.toFixed(2) + '%' : 'N/A');
+                set('likesPercent', likesPercent.toFixed(1) + '%');
+                set('commentsPercent', commentsPercent.toFixed(1) + '%');
+                set('savesPercent', savesPercent.toFixed(1) + '%');
+                set('sharesPercent', sharesPercent.toFixed(1) + '%');
+                set('qualityScore', qualityScore.toFixed(1) + '/10');
+                set('brandValue', brandValue);
+
+                // Update badge
+                const badge = document.getElementById('engagementBadge');
+                badge.textContent = `Rating: ${rating}`;
+                badge.className = `engagement-badge ${badgeClass}`;
+
+                // Update formula
+                const formEl = document.getElementById('engFormula');
+                if (formEl) {
+                    if (includeReach) {
+                        formEl.textContent = `${totalEngagements.toLocaleString()} ÷ ${reach.toLocaleString()} × 100 = ${engagementByReach.toFixed(2)}%`;
+                    } else {
+                        formEl.textContent = `${totalEngagements.toLocaleString()} ÷ ${followers.toLocaleString()} × 100 = ${engagementRate.toFixed(2)}%`;
+                    }
+                }
+
+                // Update sponsorship indicator
+                const sponsorEl = document.getElementById('sponsorshipIndicator');
+                sponsorEl.innerHTML = `<strong>${rating} Engagement (${engagementRate.toFixed(2)}%)</strong><br>${multiplier}`;
+
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'calculator_interaction', {
+                        event_category: 'engagement',
+                        event_label: 'instagram_engagement_calculator_used'
+                    });
+                }
+            }
+
+            // Reset Form Helper
+            function resetForm(ids) {
+                ids.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.value = el.defaultValue || '';
+                });
+
+                const btn = document.querySelector('.btn-ghost');
+                btn.textContent = "✓ Reset";
+                setTimeout(() => {
+                    btn.textContent = "↺ Reset";
+                }, 1200);
+            }
+
+            document.addEventListener('DOMContentLoaded', calcEngagement);
+
+            const calcBtn = document.querySelector('.btn-primary');
+            if (calcBtn) {
+                calcBtn.addEventListener('click', function () {
+                    this.classList.add('loading');
+                    this.innerHTML = '⏳ Calculating...';
+                    setTimeout(() => {
+                        this.classList.remove('loading');
+                        this.innerHTML = '⚡ Calculate Engagement';
+                    }, 400);
+                });
+            }
+        </script>
+</body>
+
+</html>
