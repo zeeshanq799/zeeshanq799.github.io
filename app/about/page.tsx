@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "About Us | IncomeFromViews",
+  title: "About Us | IncomeFromViews ",
   description: "About IncomeFromViews — We help content creators, bloggers, and freelancers maximize their online income with free, accurate earnings calculators.",
   alternates: { canonical: "https://incomefromviews.com/about/" },
   openGraph: {
