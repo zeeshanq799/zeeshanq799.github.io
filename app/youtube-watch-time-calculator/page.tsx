@@ -26,28 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLdInfo = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "YouTube Watch Time Calculator 2026",
-    "url": "https://incomefromviews.com/youtube-watch-time-calculator/",
-    "description": "Calculate YouTube watch time and views needed to reach 4,000 hours for monetization. Free calculator with progress tracking.",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "author": { "@type": "Organization", "name": "IncomeFromViews" }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://incomefromviews.com/" },
-      { "@type": "ListItem", "position": 2, "name": "YouTube Watch Time Calculator", "item": "https://incomefromviews.com/youtube-watch-time-calculator/" }
-    ]
-  }
-];
-
 const faqs = [
   {
     question: "How many views do you need for 4,000 watch hours?",
@@ -82,6 +60,115 @@ const faqs = [
     answer: "This calculator uses the exact formula YouTube uses: Views × Average Duration ÷ 60 = Hours. Results are accurate if you input correct data from YouTube Analytics. Check Analytics → Engagement → Watch time for your actual numbers."
   }
 ];
+const jsonLdInfo = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Watch Time Calculator 2026",
+    "url": "https://incomefromviews.com/youtube-watch-time-calculator/",
+    "description": "Calculate how many views you need to reach 4,000 watch hours for YouTube monetization. Free watch time estimator with progress tracking and required views breakdown.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "IncomeFromViews",
+      "url": "https://incomefromviews.com/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://incomefromviews.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "YouTube Watch Time Calculator",
+        "item": "https://incomefromviews.com/youtube-watch-time-calculator/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many views do you need for 4,000 watch hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The number of views required depends on your average view duration. With 5-minute average retention, you need approximately 48,000 views. With 8-minute retention, around 30,000 views are needed. With 12-minute retention, about 20,000 views are required. Use the calculator to estimate based on your actual retention rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Shorts watch time count toward 4,000 hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. YouTube Shorts watch time does not count toward the 4,000-hour requirement for long-form monetization. Shorts have a separate requirement of 10 million public views within 90 days. Only watch time from videos longer than 60 seconds counts toward the 4,000-hour threshold."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is YouTube watch time calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Watch time is calculated using the formula: Total Views multiplied by Average View Duration (in minutes), divided by 60. For example, 10,000 views with a 5-minute average duration equals approximately 833 hours of watch time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the YouTube monetization requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To join the YouTube Partner Program, you must have at least 1,000 subscribers and either 4,000 public watch hours in the past 12 months or 10 million public Shorts views in the past 90 days. Both subscriber and watch requirements must be met simultaneously."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do old videos count toward watch time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but only watch time from the past 12 months counts toward monetization. YouTube uses a rolling 12-month window, meaning older watch time gradually expires from the total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good average view duration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a 10-minute video, 40–50 percent retention (4–5 minutes) is considered strong. For longer videos over 20 minutes, 30–40 percent retention is generally acceptable. Higher retention typically leads to more algorithm promotion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you lose monetization after reaching 4,000 hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your watch time drops below 4,000 hours within the rolling 12-month window or your subscriber count falls below 1,000, you may lose monetization eligibility. Both thresholds must be maintained continuously."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is this watch time calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator uses the official watch time formula: Views multiplied by Average Duration divided by 60 equals total hours. Results are accurate when you input correct data from YouTube Analytics. Always verify official metrics inside YouTube Studio."
+        }
+      }
+    ]
+  }
+]
 
 export default function Page() {
   return (
@@ -275,7 +362,7 @@ export default function Page() {
 
           <Disclaimer>This calculator provides estimates based on YouTube&apos;s public watch time formula. Actual watch time may vary based on viewer behavior, video length distribution, and content type. Only public watch time from the past 12 months counts toward YouTube Partner Program requirements. Use YouTube Analytics for official watch time tracking.</Disclaimer>
 
-          <RelatedCalculators links={[{"link":"/youtube-earnings-calculator/","icon":"📊","name":"YouTube\r\n                    Earnings"},{"link":"/youtube-rpm-calculator/","icon":"📉","name":"RPM\r\n                    Calculator"},{"link":"/youtube-cpm-calculator/","icon":"📈","name":"CPM\r\n                    Calculator"},{"link":"/youtube-shorts-calculator/","icon":"📱","name":"Shorts\r\n                    Calculator"}]} />
+          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }, { "link": "/youtube-shorts-calculator/", "icon": "📱", "name": "Shorts\r\n                    Calculator" }]} />
         </article>
       </div>
     </>

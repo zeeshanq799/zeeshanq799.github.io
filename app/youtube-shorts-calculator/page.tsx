@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import YoutubeShortsCalculator from './YoutubeShortsCalculator';
 import FaqSection from '../components/FaqSection';
 import AuthorBox from '../components/AuthorBox';
@@ -26,27 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLdInfo = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "YouTube Shorts Earnings Calculator 2026",
-    "url": "https://incomefromviews.com/youtube-shorts-calculator/",
-    "description": "Calculate YouTube Shorts revenue using RPM, views, and audience geography. Compare Shorts vs long-form earnings.",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "author": { "@type": "Organization", "name": "IncomeFromViews" }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://incomefromviews.com/" },
-      { "@type": "ListItem", "position": 2, "name": "YouTube Shorts Calculator", "item": "https://incomefromviews.com/youtube-shorts-calculator/" }
-    ]
-  }
-];
 
 const faqs = [
   {
@@ -82,7 +60,115 @@ const faqs = [
     answer: "Results are estimates based on industry-reported Shorts RPM benchmarks. Actual earnings depend on your specific audience demographics, geographic distribution, and niche."
   }
 ];
-
+const jsonLdInfo = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Shorts Earnings Calculator 2026",
+    "url": "https://incomefromviews.com/youtube-shorts-calculator/",
+    "description": "Calculate YouTube Shorts revenue using RPM, views, and audience geography. Compare Shorts vs long-form earnings instantly using real 2026 RPM benchmarks.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "IncomeFromViews",
+      "url": "https://incomefromviews.com/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://incomefromviews.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "YouTube Shorts Calculator",
+        "item": "https://incomefromviews.com/youtube-shorts-calculator/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does YouTube pay for Shorts per 1,000 views in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "YouTube Shorts typically pay between $0.01 and $0.10 per 1,000 views, with most creators earning around $0.03–$0.05 RPM. Tier 1 countries such as the United States, United Kingdom, and Canada often see higher RPM, occasionally reaching $0.15 for high-value niches like finance or technology."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is YouTube Shorts RPM in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "YouTube Shorts RPM in 2026 ranges from $0.01 to $0.15 depending on audience geography and niche. The global average RPM is approximately $0.03–$0.05. RPM represents revenue after YouTube’s platform share."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do YouTube Shorts earn less than long-form videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shorts earn less because YouTube uses a revenue pooling model instead of placing ads directly inside each video. All Shorts ad revenue is pooled and distributed based on a creator’s share of total Shorts views. Shorts also generate less watch time and fewer monetization opportunities than long-form videos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Shorts views count toward monetization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Shorts views count toward the 10 million public Shorts views requirement for YouTube Partner Program eligibility. However, Shorts watch time does not count toward the 4,000 watch hours requirement for long-form monetization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I monetize Shorts without 1,000 subscribers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You must have at least 1,000 subscribers to join the YouTube Partner Program. Once approved, you can monetize both Shorts and long-form content under the same channel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What affects YouTube Shorts RPM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shorts RPM is influenced by viewer geography, content niche, advertiser demand, and overall platform ad revenue distribution. Tier 1 audiences and high-value niches such as finance or technology typically generate higher RPM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Shorts views do I need to make $1,000?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At an average Shorts RPM of $0.05, approximately 20 million views are needed to earn $1,000. Long-form content generally requires significantly fewer views to reach the same revenue level due to higher RPM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is this Shorts calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator provides estimates based on industry-reported Shorts RPM benchmarks and monetization models. Actual earnings vary depending on audience demographics, geographic distribution, niche, seasonality, and advertiser demand."
+        }
+      }
+    ]
+  }
+];
 export default function Page() {
   return (
     <>
@@ -215,7 +301,7 @@ export default function Page() {
 
           <Disclaimer>This calculator provides estimates based on industry-reported Shorts RPM benchmarks and platform revenue models. Actual YouTube Shorts earnings vary significantly based on content niche, viewer geography, advertiser demand, and seasonal fluctuations. Results should be used for planning purposes only.</Disclaimer>
 
-          <RelatedCalculators links={[{"link":"/youtube-earnings-calculator/","icon":"📊","name":"YouTube\r\n                    Earnings"},{"link":"/youtube-rpm-calculator/","icon":"📉","name":"RPM\r\n                    Calculator"},{"link":"/youtube-cpm-calculator/","icon":"📈","name":"CPM\r\n                    Calculator"},{"link":"/tiktok-earnings-calculator/","icon":"🎵","name":"TikTok\r\n                    Calculator"}]} />
+          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }, { "link": "/tiktok-earnings-calculator/", "icon": "🎵", "name": "TikTok\r\n                    Calculator" }]} />
         </article>
       </div>
     </>
