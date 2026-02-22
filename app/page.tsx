@@ -271,7 +271,7 @@ export default function Page() {
                 <div className="blog-card-img bg-gradient-tiktok-card">🎵</div>
                 <div className="blog-card-body">
                   <span className="blog-tag tag-cyan">TIKTOK</span>
-                  <h3>TikTok Creativity Program RPM Per 1000 Views in 2026</h3>
+                  <h3>TikTok Creativity Program RPM 2026 – $0.40–$1.20 Per 1,000 Views</h3>
                   <p>Updated breakdown of TikTok Creativity Program RPM per 1000 views in 2026 with country comparison, real earnings examples, and optimization tips.</p>
                   <div className="blog-meta"><span>📖 12 min read</span><span>Feb 2026</span></div>
                 </div>

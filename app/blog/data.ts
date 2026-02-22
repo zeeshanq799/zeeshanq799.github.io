@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
         icon: "🎵",
         tagClass: "tag-cyan",
         tagText: "TIKTOK",
-        title: "TikTok Creativity Program RPM Per 1000 Views in 2026",
+        title: "TikTok Creativity Program RPM 2026 – $0.40–$1.20 Per 1,000 Views",
         description: "Updated breakdown of TikTok Creativity Program RPM per 1000 views in 2026 with country comparison, real earnings examples, and optimization tips.",
         readTime: "12 min read",
         updated: "2026"
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
         icon: "📊",
         tagClass: "tag-red",
         tagText: "YOUTUBE",
-        title: "YouTube RPM by Country in 2026 (USA, UK, India, Pakistan & More)",
+        title: "YouTube RPM by Country 2026 – USA $8–$20, UK $7–$16, India $0.80–$3",
         description: "Compare YouTube RPM by country in 2026. See real earnings per 1,000 views for USA, UK, Germany, UAE, India, Pakistan and more.",
         readTime: "18 min read",
         updated: "2026"
