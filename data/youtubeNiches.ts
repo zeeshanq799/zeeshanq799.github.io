@@ -25,8 +25,8 @@ export const youtubeNiches: NicheData[] = [
             "Integrate affiliate links for products you naturally use in your daily life.",
             "Target high-volume search terms since per-view payouts are lower.",
         ],
-        activeEarnings: false,
-        activeCpm: false,
+        activeEarnings: true,
+        activeCpm: true,
     },
     {
         slug: "gaming",
@@ -58,7 +58,7 @@ export const youtubeNiches: NicheData[] = [
             "Ensure content is highly trustworthy and well-researched to retain a premium audience.",
         ],
         activeEarnings: true,
-        activeCpm: false,
+        activeCpm: true,
     },
     {
         slug: "tech",
@@ -74,7 +74,7 @@ export const youtubeNiches: NicheData[] = [
             "Build relationships with brands for direct sponsorship deals.",
         ],
         activeEarnings: true,
-        activeCpm: false,
+        activeCpm: true,
     },
     {
         slug: "education",
@@ -90,7 +90,7 @@ export const youtubeNiches: NicheData[] = [
             "Optimize video metadata for 'How to' search queries.",
         ],
         activeEarnings: true,
-        activeCpm: false,
+        activeCpm: true,
     },
     {
         slug: "lifestyle",
