@@ -31,7 +31,6 @@ export default function Navbar() {
                             <Link href="/youtube-cpm-calculator/" className={`nav-link ${pathname === '/youtube-cpm-calculator/' ? 'active' : ''}`}>CPM Calculator</Link>
                             <Link href="/youtube-rpm-calculator/" className={`nav-link ${pathname === '/youtube-rpm-calculator/' ? 'active' : ''}`}>RPM Calculator</Link>
                             <Link href="/youtube-shorts-calculator/" className={`nav-link ${pathname === '/youtube-shorts-calculator/' ? 'active' : ''}`}>Shorts Calculator</Link>
-                            <Link href="/youtube-sponsorship-calculator/" className={`nav-link ${pathname === '/youtube-sponsorship-calculator/' ? 'active' : ''}`}>Sponsorship Rates</Link>
                         </div>
                     </div>
                     <Link href="/tiktok-earnings-calculator/" className={`nav-link ${isActive('/tiktok-earnings-calculator/') ? 'active' : ''}`}>TikTok</Link>
