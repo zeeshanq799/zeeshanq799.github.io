@@ -362,7 +362,7 @@ export default function Page() {
 
           <Disclaimer>This calculator provides estimates based on YouTube&apos;s public watch time formula. Actual watch time may vary based on viewer behavior, video length distribution, and content type. Only public watch time from the past 12 months counts toward YouTube Partner Program requirements. Use YouTube Analytics for official watch time tracking.</Disclaimer>
 
-          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }, { "link": "/youtube-shorts-calculator/", "icon": "📱", "name": "Shorts\r\n                    Calculator" }]} />
+          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-monetization-checker/", "icon": "✅", "name": "Monetization\r\n                    Checker" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }]} />
         </article>
       </div>
     </>

@@ -304,10 +304,10 @@ export default function Page() {
           <AuthorBox />
 
           <Disclaimer>The figures and usage examples provided in this calculator are for educational
-              purposes. Actual earnings vary based on audience demographics, niche, time of year, and platform policy
-              changes. We do not guarantee specific results.</Disclaimer>
+            purposes. Actual earnings vary based on audience demographics, niche, time of year, and platform policy
+            changes. We do not guarantee specific results.</Disclaimer>
 
-          <RelatedCalculators links={[{"link":"/youtube-cpm-calculator/","icon":"📊","name":"CPM\r\n          Calculator"},{"link":"/youtube-earnings-calculator/","icon":"💰","name":"YouTube\r\n          Money Calc"},{"link":"/adsense-revenue-calculator/","icon":"📈","name":"AdSense\r\n          Estimator"},{"link":"/tiktok-earnings-calculator/","icon":"🎵","name":"TikTok\r\n          Calculator"}]} />
+          <RelatedCalculators links={[{ "link": "/youtube-cpm-calculator/", "icon": "📊", "name": "CPM\r\n          Calculator" }, { "link": "/youtube-earnings-calculator/", "icon": "💰", "name": "YouTube\r\n          Money Calc" }, { "link": "/adsense-revenue-calculator/", "icon": "📈", "name": "AdSense\r\n          Estimator" }, { "link": "/youtube-channel-valuation-calculator/", "icon": "💎", "name": "Channel\r\n          Valuation" }]} />
         </article>
       </div>
     </>

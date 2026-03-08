@@ -714,7 +714,8 @@ export default function Page() {
             <li><Link href="/blog/youtube-cpm-guide/">Complete YouTube CPM Guide</Link></li>
             <li><Link href="/blog/youtube-rpm-by-country/">YouTube RPM by Country (Updated 2026 Data)</Link></li>
             <li><Link href="/blog/how-to-earn-money-on-youtube/">How to Earn Money on YouTube in 2026 (Complete Beginner Guide)</Link></li>
-            <li><Link href="/blog/highest-paying-youtube-niches-2026/">Highest Paying YouTube Niches in 2026</Link></li>
+            <li><Link href="/youtube-monetization-checker/">YouTube Monetization Eligibility Checker</Link></li>
+            <li><Link href="/youtube-channel-valuation-calculator/">YouTube Channel Valuation Calculator</Link></li>
           </ul>
         </nav>
 

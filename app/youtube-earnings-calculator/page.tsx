@@ -247,7 +247,7 @@ export default function Page() {
 
           <Disclaimer>The figures and usage examples provided in this calculator are for educational purposes. Actual earnings vary based on audience demographics, niche, time of year, and platform policy changes. We do not guarantee specific results.</Disclaimer>
 
-          <RelatedCalculators links={[{"link":"/youtube-cpm-calculator/","icon":"📊","name":"CPM\r\n          Calculator"},{"link":"/youtube-rpm-calculator/","icon":"📉","name":"RPM\r\n          Calculator"},{"link":"/adsense-revenue-calculator/","icon":"📈","name":"AdSense\r\n          Estimator"},{"link":"/tiktok-earnings-calculator/","icon":"🎵","name":"TikTok\r\n          Calculator"}]} />
+          <RelatedCalculators links={[{ "link": "/youtube-cpm-calculator/", "icon": "📊", "name": "CPM\r\n          Calculator" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n          Calculator" }, { "link": "/adsense-revenue-calculator/", "icon": "📈", "name": "AdSense\r\n          Estimator" }, { "link": "/youtube-channel-valuation-calculator/", "icon": "💎", "name": "Channel\r\n          Valuation" }]} />
         </article>
       </div>
     </>

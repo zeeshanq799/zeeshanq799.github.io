@@ -170,7 +170,7 @@ export default function Page() {
           <p>
             If you&apos;re learning how monetization works overall, read our complete guide on{' '}
             <Link href="/blog/how-to-earn-money-on-youtube/">how to earn money on YouTube</Link>,
-            where we explain AdSense, RPM, CPM, Shorts revenue, and alternative income streams in detail.
+            and test your channel in our <Link href="/youtube-monetization-checker/">Monetization Checker</Link> to track your progress.
           </p>
 
           <h2>Estimated YouTube RPM by Country (2026)</h2>

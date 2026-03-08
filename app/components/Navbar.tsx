@@ -25,11 +25,13 @@ export default function Navbar() {
                             YouTube ▼
                         </span>
                         <div className="nav-dropdown-content">
-                            <Link href="/youtube-earnings-calculator/" className={`nav-link ${isActive('/youtube-earnings-calculator/') ? 'active' : ''}`}>Earnings Calculator</Link>
-                            <Link href="/youtube-rpm-calculator/" className={`nav-link ${isActive('/youtube-rpm-calculator/') ? 'active' : ''}`}>RPM Calculator</Link>
-                            <Link href="/youtube-cpm-calculator/" className={`nav-link ${isActive('/youtube-cpm-calculator/') ? 'active' : ''}`}>CPM Calculator</Link>
-                            <Link href="/youtube-shorts-calculator/" className={`nav-link ${isActive('/youtube-shorts-calculator/') ? 'active' : ''}`}>Shorts Calculator</Link>
-                            <Link href="/youtube-watch-time-calculator/" className={`nav-link ${isActive('/youtube-watch-time-calculator/') ? 'active' : ''}`}>Watch Time Calculator</Link>
+                            <Link href="/youtube-earnings-calculator/" className={`nav-link ${pathname === '/youtube-earnings-calculator/' ? 'active' : ''}`}>YouTube Earnings</Link>
+                            <Link href="/youtube-monetization-checker/" className={`nav-link ${pathname === '/youtube-monetization-checker/' ? 'active' : ''}`}>Monetization Checker</Link>
+                            <Link href="/youtube-channel-valuation-calculator/" className={`nav-link ${pathname === '/youtube-channel-valuation-calculator/' ? 'active' : ''}`}>Channel Valuation</Link>
+                            <Link href="/youtube-cpm-calculator/" className={`nav-link ${pathname === '/youtube-cpm-calculator/' ? 'active' : ''}`}>CPM Calculator</Link>
+                            <Link href="/youtube-rpm-calculator/" className={`nav-link ${pathname === '/youtube-rpm-calculator/' ? 'active' : ''}`}>RPM Calculator</Link>
+                            <Link href="/youtube-shorts-calculator/" className={`nav-link ${pathname === '/youtube-shorts-calculator/' ? 'active' : ''}`}>Shorts Calculator</Link>
+                            <Link href="/youtube-sponsorship-calculator/" className={`nav-link ${pathname === '/youtube-sponsorship-calculator/' ? 'active' : ''}`}>Sponsorship Rates</Link>
                         </div>
                     </div>
                     <Link href="/tiktok-earnings-calculator/" className={`nav-link ${isActive('/tiktok-earnings-calculator/') ? 'active' : ''}`}>TikTok</Link>
@@ -65,6 +67,7 @@ export default function Navbar() {
                         <Link href="/youtube-cpm-calculator/" className="mobile-link mobile-sublink" onClick={() => setMobileMenuOpen(false)}>CPM Calculator</Link>
                         <Link href="/youtube-shorts-calculator/" className="mobile-link mobile-sublink" onClick={() => setMobileMenuOpen(false)}>Shorts Calculator</Link>
                         <Link href="/youtube-watch-time-calculator/" className="mobile-link mobile-sublink" onClick={() => setMobileMenuOpen(false)}>Watch Time Calculator</Link>
+                        <Link href="/youtube-monetization-checker/" className="mobile-link mobile-sublink" onClick={() => setMobileMenuOpen(false)}>Monetization Checker</Link>
                     </div>
                 </div>
                 <Link href="/tiktok-earnings-calculator/" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>TikTok</Link>

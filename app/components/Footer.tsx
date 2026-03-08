@@ -13,6 +13,8 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4>Calculators</h4>
                         <a href="/youtube-earnings-calculator/">YouTube Earnings</a>
+                        <a href="/youtube-monetization-checker/">Monetization Checker</a>
+                        <a href="/youtube-channel-valuation-calculator/">Channel Valuation</a>
                         <a href="/youtube-cpm-calculator/">CPM Calculator</a>
                         <a href="/youtube-rpm-calculator/">RPM Calculator</a>
                         <a href="/tiktok-earnings-calculator/">TikTok Earnings</a>

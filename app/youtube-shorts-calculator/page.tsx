@@ -301,7 +301,7 @@ export default function Page() {
 
           <Disclaimer>This calculator provides estimates based on industry-reported Shorts RPM benchmarks and platform revenue models. Actual YouTube Shorts earnings vary significantly based on content niche, viewer geography, advertiser demand, and seasonal fluctuations. Results should be used for planning purposes only.</Disclaimer>
 
-          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }, { "link": "/tiktok-earnings-calculator/", "icon": "🎵", "name": "TikTok\r\n                    Calculator" }]} />
+          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-monetization-checker/", "icon": "✅", "name": "Monetization\r\n                    Checker" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }]} />
         </article>
       </div>
     </>

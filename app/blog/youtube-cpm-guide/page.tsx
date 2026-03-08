@@ -279,9 +279,9 @@ export default function Page() {
           <ul>
             <li><Link href="/blog/how-to-earn-money-on-youtube/">How to Earn Money on YouTube in 2026</Link></li>
             <li><Link href="/blog/rpm-vs-cpm-youtube/">RPM vs CPM: What&apos;s the Difference and Which Matters More?</Link></li>
+            <li><Link href="/youtube-monetization-checker/">YouTube Monetization Eligibility Checker</Link></li>
             <li><Link href="/blog/tiktok-money/">How Much Does TikTok Pay? Complete 2026 Earnings Guide</Link></li>
             <li><Link href="/blog/adsense-tips/">How to Double Your AdSense Revenue: 12 Proven Tips</Link></li>
-            <li><Link href="/blog/freelance-rates/">How to Set Your Freelance Rate: The Complete 2026 Guide</Link></li>
           </ul>
         </nav>
       </article>

@@ -243,8 +243,7 @@ export default function Page() {
           <div className="internal-hub-links">
             <ul>
               <li><Link href="/blog/how-to-earn-money-on-youtube/">Full Guide: YouTube Monetization Requirements in 2026</Link></li>
-              <li><Link href="/blog/how-to-earn-money-on-youtube/">How the YouTube Partner Program Approval Process Works</Link></li>
-              <li><Link href="/blog/how-to-earn-money-on-youtube/">Common Reasons YouTube Rejects Monetization Applications</Link></li>
+              <li><Link href="/youtube-monetization-checker/">YouTube Monetization Eligibility Checker</Link></li>
             </ul>
           </div>
 
@@ -346,6 +345,7 @@ export default function Page() {
             <li><Link href="/youtube-cpm-calculator/">YouTube CPM Calculator</Link></li>
             <li><Link href="/youtube-rpm-calculator/">YouTube RPM Calculator</Link></li>
             <li><Link href="/youtube-earnings-calculator/">YouTube Earnings Calculator</Link></li>
+            <li><Link href="/youtube-monetization-checker/">YouTube Monetization Checker</Link></li>
           </ul>
 
           <hr />
@@ -355,6 +355,7 @@ export default function Page() {
             <ul>
               <li><Link href="/blog/how-much-does-youtube-pay-per-1000-views/">How Much Does YouTube Pay Per 1,000 Views?</Link></li>
               <li><Link href="/blog/how-much-does-youtube-pay-per-1000-views/">How Much Does YouTube Pay Per 1 Million Views?</Link></li>
+              <li><Link href="/youtube-channel-valuation-calculator/">How Much Is Your Channel Worth? (Valuation Calculator)</Link></li>
             </ul>
           </div>
 
