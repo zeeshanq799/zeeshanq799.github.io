@@ -12,6 +12,39 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        url: "/blog/common-ypp-rejection-reasons/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "❌",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE MONETIZATION",
+        title: "Common YouTube Partner Program Rejection Reasons: Complete 2026 Guide",
+        description: "Why YouTube rejects monetization applications: reused content, policy violations, misleading metadata, artificial engagement, copyright issues, and how to fix each rejection reason.",
+        readTime: "21 min read",
+        updated: "February 19, 2026"
+    },
+    {
+        url: "/blog/how-much-does-youtube-pay-per-million-views/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "📈",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE EARNINGS",
+        title: "How Much Does YouTube Pay for 1 Million Views in 2026?",
+        description: "YouTube pays $1,000–$15,000+ for 1 million long-form views depending on niche, audience country, and RPM. Full 2026 breakdown with verified data.",
+        readTime: "14 min read",
+        updated: "February 18, 2026"
+    },
+    {
+        url: "/blog/highest-paying-youtube-niches-2026/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "💰",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE EARNINGS",
+        title: "Highest Paying YouTube Niches in 2026",
+        description: "The highest paying YouTube niches in 2026: personal finance ($20–$50 CPM), B2B software ($18–$45), and technology ($10–$25). Full CPM and RPM breakdown for 15+ niches with verified data.",
+        readTime: "16 min read",
+        updated: "February 18, 2026"
+    },
+    {
         url: "/blog/tiktok-creativity-program-rpm-2026/",
         imgClass: "bg-gradient-tiktok-card",
         icon: "🎵",

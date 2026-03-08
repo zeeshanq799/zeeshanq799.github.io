@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push("/blog/", "weekly", 0.9);
 
     push("/blog/how-to-earn-money-on-youtube/", "weekly", 0.9);
+    push("/blog/common-ypp-rejection-reasons/", "weekly", 0.8);
+    push("/blog/how-much-does-youtube-pay-per-million-views/", "weekly", 0.8);
+    push("/blog/highest-paying-youtube-niches-2026/", "weekly", 0.8);
     push("/blog/tiktok-money/", "weekly", 0.8);
     push("/blog/adsense-tips/", "weekly", 0.8);
     push("/blog/freelance-rates/", "weekly", 0.8);
