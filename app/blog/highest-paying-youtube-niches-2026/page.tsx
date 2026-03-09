@@ -238,6 +238,7 @@ export default function Page() {
                             <li><Link href="/blog/how-much-does-youtube-pay-per-1000-views/">How Much YouTube Pays Per 1 Million
                                 Views</Link></li>
                             <li><Link href="/blog/rpm-vs-cpm-youtube/">RPM vs CPM: What&apos;s the Difference?</Link></li>
+                            <li><Link href="/youtube-watch-time-calculator/">YouTube Watch Time Calculator</Link></li>
                         </ul>
                     </div>
 

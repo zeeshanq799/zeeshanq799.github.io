@@ -226,7 +226,7 @@ export default function Page() {
                         <li>Go to <strong>YouTube Studio</strong> (studio.youtube.com)</li>
                         <li>Click <strong>Analytics</strong> in the left sidebar</li>
                         <li>Select the <strong>Monetization</strong> tab</li>
-                        <li>View your current watch hours and subscriber count</li>
+                        <li>View your current watch hours and subscriber count. You can also use our <Link href="/youtube-watch-time-calculator/">Watch Time Calculator</Link> to estimate your progress based on average viewing duration!</li>
                     </ol>
 
                     <p>The dashboard displays:</p>

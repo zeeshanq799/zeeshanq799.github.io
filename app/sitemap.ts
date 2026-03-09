@@ -49,6 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push("/youtube-watch-time-calculator/", "weekly", 0.8);
     push("/youtube-monetization-checker/", "weekly", 0.8);
     push("/youtube-channel-valuation-calculator/", "weekly", 0.8);
+    push("/youtube-sponsorship-calculator/", "weekly", 0.8);
+    push("/youtube-upload-planner/", "weekly", 0.8);
     push("/tiktok-earnings-calculator/", "weekly", 0.8);
     push("/instagram-earnings-calculator/", "weekly", 0.8);
     push("/adsense-revenue-calculator/", "weekly", 0.8);

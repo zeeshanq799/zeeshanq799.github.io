@@ -26,76 +26,28 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "How many views do you need for 4,000 watch hours?",
-    answer: "It depends on average view duration. With 5-minute average retention, you need approximately 48,000 views. With 8-minute retention, you need 30,000 views. With 12-minute retention, you need 20,000 views. Use the calculator above to get your exact number based on your actual retention rate."
-  },
-  {
-    question: "Does Shorts watch time count toward 4,000 hours?",
-    answer: "No. YouTube Shorts watch time does NOT count toward the 4,000-hour requirement for long-form monetization. Shorts have a separate monetization path requiring 10 million Shorts views in 90 days. Only watch time from videos longer than 60 seconds counts toward the 4,000-hour requirement."
-  },
-  {
-    question: "How is YouTube watch time calculated?",
-    answer: "Watch time = Total Views × Average View Duration (in minutes) ÷ 60. For example, 10,000 views with 5-minute average duration = (10,000 × 5) ÷ 60 = 833 hours of watch time. YouTube tracks this automatically in your Analytics dashboard."
-  },
-  {
-    question: "What is the YouTube monetization requirement?",
-    answer: "You need 1,000 subscribers AND 4,000 public watch hours in the past 12 months OR 1,000 subscribers AND 10 million public Shorts views in 90 days. Both requirements must be met simultaneously to join the YouTube Partner Program."
-  },
-  {
-    question: "Do old videos count toward watch time?",
-    answer: "Yes, but only watch time from the past 12 months counts. YouTube uses a rolling 12-month window, so older watch time eventually expires from your total. This means you need to maintain consistent uploads and views to stay monetized."
-  },
-  {
-    question: "What is a good average view duration?",
-    answer: "For a 10-minute video, 40-50% retention (4-5 minutes) is good. For longer videos (20+ minutes), 30-40% retention is acceptable. Higher retention means YouTube promotes your videos more, accelerating your path to 4,000 hours."
-  },
-  {
-    question: "Can you lose monetization after reaching 4,000 hours?",
-    answer: "Yes. If your watch time drops below 4,000 hours in the rolling 12-month window OR your subscribers drop below 1,000, you can lose monetization. You must maintain both thresholds continuously to stay monetized."
-  },
-  {
-    question: "How accurate is this watch time calculator?",
-    answer: "This calculator uses the exact formula YouTube uses: Views × Average Duration ÷ 60 = Hours. Results are accurate if you input correct data from YouTube Analytics. Check Analytics → Engagement → Watch time for your actual numbers."
-  }
-];
 const jsonLdInfo = [
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "YouTube Watch Time Calculator 2026",
     "url": "https://incomefromviews.com/youtube-watch-time-calculator/",
-    "description": "Calculate how many views you need to reach 4,000 watch hours for YouTube monetization. Free watch time estimator with progress tracking and required views breakdown.",
+    "description": "Calculate YouTube watch time and views needed to reach 4,000 hours for monetization. Free calculator with progress tracking.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "creator": {
+    "browserRequirements": "Requires JavaScript enabled",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": {
       "@type": "Organization",
-      "name": "IncomeFromViews",
-      "url": "https://incomefromviews.com/"
+      "name": "IncomeFromViews"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://incomefromviews.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "YouTube Watch Time Calculator",
-        "item": "https://incomefromviews.com/youtube-watch-time-calculator/"
-      }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://incomefromviews.com/" },
+      { "@type": "ListItem", "position": 2, "name": "YouTube Watch Time Calculator", "item": "https://incomefromviews.com/youtube-watch-time-calculator/" }
     ]
   },
   {
@@ -105,75 +57,72 @@ const jsonLdInfo = [
       {
         "@type": "Question",
         "name": "How many views do you need for 4,000 watch hours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The number of views required depends on your average view duration. With 5-minute average retention, you need approximately 48,000 views. With 8-minute retention, around 30,000 views are needed. With 12-minute retention, about 20,000 views are required. Use the calculator to estimate based on your actual retention rate."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on average view duration. With 5-minute average retention, you need approximately 48,000 views. With 8-minute retention, you need 30,000 views. With 12-minute retention, you need 20,000 views." }
       },
       {
         "@type": "Question",
         "name": "Does Shorts watch time count toward 4,000 hours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. YouTube Shorts watch time does not count toward the 4,000-hour requirement for long-form monetization. Shorts have a separate requirement of 10 million public views within 90 days. Only watch time from videos longer than 60 seconds counts toward the 4,000-hour threshold."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "No. YouTube Shorts watch time does NOT count toward the 4,000-hour requirement for long-form monetization. Shorts have a separate monetization path requiring 10 million views in 90 days." }
       },
       {
         "@type": "Question",
         "name": "How is YouTube watch time calculated?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Watch time is calculated using the formula: Total Views multiplied by Average View Duration (in minutes), divided by 60. For example, 10,000 views with a 5-minute average duration equals approximately 833 hours of watch time."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Watch time = Total Views × Average View Duration (in minutes) ÷ 60. For example, 10,000 views with 5-minute average duration = 833 hours of watch time." }
       },
       {
         "@type": "Question",
         "name": "What is the YouTube monetization requirement?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To join the YouTube Partner Program, you must have at least 1,000 subscribers and either 4,000 public watch hours in the past 12 months or 10 million public Shorts views in the past 90 days. Both subscriber and watch requirements must be met simultaneously."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "You need 1,000 subscribers AND 4,000 public watch hours in the past 12 months OR 1,000 subscribers AND 10 million public Shorts views in 90 days." }
       },
       {
         "@type": "Question",
         "name": "Do old videos count toward watch time?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, but only watch time from the past 12 months counts toward monetization. YouTube uses a rolling 12-month window, meaning older watch time gradually expires from the total."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a good average view duration?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For a 10-minute video, 40–50 percent retention (4–5 minutes) is considered strong. For longer videos over 20 minutes, 30–40 percent retention is generally acceptable. Higher retention typically leads to more algorithm promotion."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you lose monetization after reaching 4,000 hours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. If your watch time drops below 4,000 hours within the rolling 12-month window or your subscriber count falls below 1,000, you may lose monetization eligibility. Both thresholds must be maintained continuously."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How accurate is this watch time calculator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This calculator uses the official watch time formula: Views multiplied by Average Duration divided by 60 equals total hours. Results are accurate when you input correct data from YouTube Analytics. Always verify official metrics inside YouTube Studio."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only watch time from the past 12 months counts. YouTube uses a rolling 12-month window, so older watch time eventually expires from your total." }
       }
     ]
   }
-]
+];
 
 export default function Page() {
+  const faqData = [
+    {
+      question: "How many views do you need for 4,000 watch hours?",
+      answer: "It depends on average view duration. With 5-minute average retention, you need approximately 48,000 views. With 8-minute retention, you need 30,000 views. With 12-minute retention, you need 20,000 views. Use the calculator above to get your exact number based on your actual retention rate."
+    },
+    {
+      question: "Does Shorts watch time count toward 4,000 hours?",
+      answer: "No. YouTube Shorts watch time does NOT count toward the 4,000-hour requirement for long-form monetization. Shorts have a separate monetization path requiring 10 million Shorts views in 90 days. Only watch time from videos longer than 60 seconds counts toward the 4,000-hour requirement."
+    },
+    {
+      question: "How is YouTube watch time calculated?",
+      answer: "Watch time = Total Views × Average View Duration (in minutes) ÷ 60. For example, 10,000 views with 5-minute average duration = (10,000 × 5) ÷ 60 = 833 hours of watch time. YouTube tracks this automatically in your Analytics dashboard."
+    },
+    {
+      question: "What is the YouTube monetization requirement?",
+      answer: "You need 1,000 subscribers AND 4,000 public watch hours in the past 12 months OR 1,000 subscribers AND 10 million public Shorts views in 90 days. Both requirements must be met simultaneously to join the YouTube Partner Program."
+    },
+    {
+      question: "Do old videos count toward watch time?",
+      answer: "Yes, but only watch time from the past 12 months counts. YouTube uses a rolling 12-month window, so older watch time eventually expires from your total. This means you need to maintain consistent uploads and views to stay monetized."
+    },
+    {
+      question: "What is a good average view duration?",
+      answer: "For a 10-minute video, 40-50% retention (4-5 minutes) is good. For longer videos (20+ minutes), 30-40% retention is acceptable. Higher retention means YouTube promotes your videos more, accelerating your path to 4,000 hours."
+    },
+    {
+      question: "Can you lose monetization after reaching 4,000 hours?",
+      answer: "Yes. If your watch time drops below 4,000 hours in the rolling 12-month window OR your subscribers drop below 1,000, you can lose monetization. You must maintain both thresholds continuously to stay monetized."
+    },
+    {
+      question: "How accurate is this watch time calculator?",
+      answer: "This calculator uses the exact formula YouTube uses: Views × Average Duration ÷ 60 = Hours. Results are accurate if you input correct data from YouTube Analytics. Check Analytics → Engagement → Watch time for your actual numbers."
+    }
+  ];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdInfo) }} />
+
       <section className="page-hero">
         <div className="page-hero-inner">
           <div className="hero-badge anim-1">⏱️ Monetization Tracker</div>
@@ -182,11 +131,10 @@ export default function Page() {
               <rect width="48" height="34" rx="8" fill="#FF0000" />
               <path d="M32 17L19 24.5V9.5L32 17Z" fill="white" />
             </svg>
-            YouTube Watch Time Estimator<br />
-            <span className="grad">4,000 Hours Monetization Calculator</span>
+            YouTube Watch Time Estimator<br /><span className="grad">4,000 Hours Monetization Calculator</span>
           </h1>
           <div className="page-updated anim-3">Last Updated: February 2026</div>
-          <p className="hero-sub anim-4" style={{ maxWidth: 950 }}>
+          <p className="hero-sub anim-4" style={{ maxWidth: '950px' }}>
             Calculate how many views you need to reach 4,000 watch hours for YouTube monetization. This free YouTube Watch Time Calculator shows your current progress, remaining hours, and exact view count needed based on your average view duration.
           </p>
         </div>
@@ -195,22 +143,25 @@ export default function Page() {
       <div className="container">
         <div className="calc-section" id="youtube">
           <YoutubeWatchTimeCalculator />
-          <div className="faq-wrap" style={{ marginTop: 40, padding: 24, background: "var(--surface)", borderRadius: 16 }}>
-            <div className="faq-head" style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: 16 }}>Frequently Asked Questions</div>
-            <FaqSection items={faqs} />
-          </div>
+          <FaqSection items={faqData} />
         </div>
+      </div>
 
-        <div className="container" style={{ paddingTop: 60 }}>
-          <p style={{ textAlign: "center", maxWidth: 800, margin: "0 auto 40px", fontSize: "1.05rem", color: "var(--text-500)", lineHeight: 1.6 }}>
-            The YouTube Watch Time Calculator helps you track progress toward the 4,000-hour monetization requirement and shows exactly how many views you need based on your average view duration.
-          </p>
-        </div>
+      <div className="container" style={{ paddingTop: '60px' }}>
+        <p style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px", fontSize: "1.05rem", color: "var(--text-500)", lineHeight: 1.6 }}>
+          The YouTube Watch Time Calculator helps you track progress toward the 4,000-hour monetization requirement and shows exactly how many views you need based on your average view duration.
+        </p>
+      </div>
 
+      <div className="container">
         <article className="content-section">
           <h2>What Is YouTube Watch Time?</h2>
-          <p>YouTube watch time is the total amount of time viewers spend watching your videos, measured in hours. It&apos;s calculated by adding up all the minutes watched across all your content and converting to hours.</p>
-          <p>YouTube prioritizes watch time over views because it&apos;s a better indicator of content quality. A video with 1,000 views and 8-minute average duration (133 hours) is more valuable to YouTube than a video with 10,000 views and 30-second duration (83 hours).</p>
+          <p>
+            YouTube watch time is the total amount of time viewers spend watching your videos, measured in hours. It&apos;s calculated by adding up all the minutes watched across all your content and converting to hours.
+          </p>
+          <p>
+            YouTube prioritizes watch time over views because it&apos;s a better indicator of content quality. A video with 1,000 views and 8-minute average duration (133 hours) is more valuable to YouTube than a video with 10,000 views and 30-second duration (83 hours).
+          </p>
 
           <p><strong>Why watch time matters:</strong></p>
           <ul>
@@ -220,7 +171,9 @@ export default function Page() {
           </ul>
 
           <h2>How Many Watch Hours Do You Need for Monetization?</h2>
-          <p>To monetize your YouTube channel in 2026, you must meet <strong>both</strong> of these requirements simultaneously:</p>
+          <p>
+            To monetize your YouTube channel in 2026, you must meet <strong>both</strong> of these requirements simultaneously:
+          </p>
 
           <div className="highlight-box">
             <h3 className="mt-0">✅ YouTube Partner Program Requirements</h3>
@@ -239,13 +192,15 @@ export default function Page() {
           <p><strong>Important clarifications:</strong></p>
           <ul>
             <li>The 4,000 hours must be from <em>public</em> videos (not private or unlisted)</li>
-            <li>Only the past 12 months count &mdash; older watch time doesn&apos;t apply</li>
+            <li>Only the past 12 months count — older watch time doesn&apos;t apply</li>
             <li>This is a <em>rolling</em> 12-month window that updates daily</li>
             <li>Shorts watch time does NOT count toward the 4,000-hour requirement</li>
           </ul>
 
           <h2>How Many Views Do You Need to Reach 4,000 Hours?</h2>
-          <p>The number of views needed depends entirely on your average view duration. Here&apos;s the breakdown:</p>
+          <p>
+            The number of views needed depends entirely on your average view duration. Here&apos;s the breakdown:
+          </p>
 
           <div className="table-responsive">
             <table className="data-table">
@@ -268,13 +223,15 @@ export default function Page() {
           </div>
 
           <p><strong>Example calculation:</strong> If your videos average 6 minutes of watch time per view:</p>
-          <div style={{ background: "#f9fafb", padding: "1.5rem", borderRadius: 8, margin: "1.5rem 0" }}>
+          <div style={{ background: "#f9fafb", padding: "1.5rem", borderRadius: "8px", margin: "1.5rem 0" }}>
             <code style={{ fontSize: "1rem", color: "#1f2937" }}>
-              Views Needed = (4,000 hours &times; 60 minutes) &divide; 6 minutes = 40,000 views
+              Views Needed = (4,000 hours × 60 minutes) ÷ 6 minutes = 40,000 views
             </code>
           </div>
 
-          <p>Use the calculator above to get your exact number based on your actual average view duration from YouTube Analytics.</p>
+          <p>
+            Use the calculator above to get your exact number based on your actual average view duration from YouTube Analytics.
+          </p>
 
           <h2>Does Shorts Watch Time Count?</h2>
           <p>This is one of the most common questions from new creators, and the answer is clear:</p>
@@ -288,7 +245,9 @@ export default function Page() {
             <li>Only videos longer than 60 seconds contribute to the 4,000-hour requirement</li>
           </ul>
 
-          <p><strong>What this means for you:</strong> If you want to reach 4,000 hours for long-form monetization, you must focus on videos longer than 60 seconds. Shorts can help you gain subscribers (which you also need), but they won&apos;t contribute to your watch time goal.</p>
+          <p>
+            <strong>What this means for you:</strong> If you want to reach 4,000 hours for long-form monetization, you must focus on videos longer than 60 seconds. Shorts can help you gain subscribers (which you also need), but they won&apos;t contribute to your watch time goal.
+          </p>
 
           <h2>How to Increase Watch Time Faster</h2>
           <p>Reaching 4,000 hours faster requires optimizing for viewer retention. Here are proven strategies:</p>
@@ -300,7 +259,8 @@ export default function Page() {
             <li>A preview of the payoff (what viewers will learn/gain)</li>
             <li>Visual interest (movement, graphics, b-roll)</li>
           </ul>
-          <p><strong>Bad intro:</strong> &quot;Hey guys, welcome back to my channel, today we&apos;re going to talk about...&quot;<br />
+          <p>
+            <strong>Bad intro:</strong> &quot;Hey guys, welcome back to my channel, today we&apos;re going to talk about...&quot;<br />
             <strong>Good intro:</strong> &quot;This one setting doubled my views overnight. Here&apos;s exactly what I changed.&quot;
           </p>
 
@@ -314,9 +274,12 @@ export default function Page() {
           </ul>
 
           <h3>3. Improve Thumbnail and Title Match</h3>
-          <p>If your thumbnail promises one thing but your video delivers something else, viewers leave immediately. This tanks your retention and watch time.</p>
-
-          <p><strong>Solution:</strong> Deliver on your thumbnail promise within the first 60 seconds, then expand on the topic.</p>
+          <p>
+            If your thumbnail promises one thing but your video delivers something else, viewers leave immediately. This tanks your retention and watch time.
+          </p>
+          <p>
+            <strong>Solution:</strong> Deliver on your thumbnail promise within the first 60 seconds, then expand on the topic.
+          </p>
 
           <h3>4. Optimal Video Length for Your Niche</h3>
           <p>Different niches have different optimal lengths:</p>
@@ -337,8 +300,9 @@ export default function Page() {
           <p>This narrative structure keeps viewers watching to see the resolution.</p>
 
           <h3>6. Analyze Retention Graphs</h3>
-          <p>YouTube Analytics shows exactly where viewers drop off. Check YouTube Studio &rarr; Analytics &rarr; Engagement &rarr; Audience retention for each video.</p>
-
+          <p>
+            YouTube Analytics shows exactly where viewers drop off. Check YouTube Studio &rarr; Analytics &rarr; Engagement &rarr; Audience retention for each video.
+          </p>
           <p>Look for:</p>
           <ul>
             <li><strong>Drop-offs:</strong> Where did 20%+ of viewers leave?</li>
@@ -348,7 +312,6 @@ export default function Page() {
 
           <h2>Tracking Your Progress</h2>
           <p>Monitor your watch time progress in YouTube Studio:</p>
-
           <ol>
             <li>Go to YouTube Studio &rarr; Analytics</li>
             <li>Click the &quot;Monetization&quot; tab (even if not yet monetized)</li>
@@ -356,13 +319,23 @@ export default function Page() {
             <li>Check the graph showing your 12-month rolling window</li>
           </ol>
 
-          <p><strong>Pro tip:</strong> Set up monthly reminders to check your progress. If you&apos;re growing too slowly, adjust your content strategy based on what&apos;s working best in your retention analytics.</p>
+          <p>
+            <strong>Pro tip:</strong> Set up monthly reminders to check your progress. If you&apos;re growing too slowly, adjust your content strategy based on what&apos;s working best in your retention analytics.
+          </p>
 
           <AuthorBox />
 
-          <Disclaimer>This calculator provides estimates based on YouTube&apos;s public watch time formula. Actual watch time may vary based on viewer behavior, video length distribution, and content type. Only public watch time from the past 12 months counts toward YouTube Partner Program requirements. Use YouTube Analytics for official watch time tracking.</Disclaimer>
+          <Disclaimer>
+            This calculator provides estimates based on YouTube&apos;s public watch time formula. Actual watch time may vary based on viewer behavior, video length distribution, and content type. Only public watch time from the past 12 months counts toward YouTube Partner Program requirements. Use YouTube Analytics for official watch time tracking.
+          </Disclaimer>
 
-          <RelatedCalculators links={[{ "link": "/youtube-earnings-calculator/", "icon": "📊", "name": "YouTube\r\n                    Earnings" }, { "link": "/youtube-rpm-calculator/", "icon": "📉", "name": "RPM\r\n                    Calculator" }, { "link": "/youtube-monetization-checker/", "icon": "✅", "name": "Monetization\r\n                    Checker" }, { "link": "/youtube-cpm-calculator/", "icon": "📈", "name": "CPM\r\n                    Calculator" }]} />
+          <h2 className="bt-1 pt-40 mt-40">Related Calculators</h2>
+          <RelatedCalculators links={[
+            { link: "/youtube-earnings-calculator/", icon: "📊", name: "YouTube\nEarnings" },
+            { link: "/youtube-rpm-calculator/", icon: "📉", name: "RPM\nCalculator" },
+            { link: "/youtube-cpm-calculator/", icon: "📈", name: "CPM\nCalculator" },
+            { link: "/youtube-shorts-calculator/", icon: "📱", name: "Shorts\nCalculator" }
+          ]} />
         </article>
       </div>
     </>

@@ -244,6 +244,7 @@ export default function Page() {
             <ul>
               <li><Link href="/blog/how-to-earn-money-on-youtube/">Full Guide: YouTube Monetization Requirements in 2026</Link></li>
               <li><Link href="/youtube-monetization-checker/">YouTube Monetization Eligibility Checker</Link></li>
+              <li><Link href="/youtube-watch-time-calculator/">YouTube Watch Time Calculator</Link></li>
             </ul>
           </div>
 
@@ -512,6 +513,7 @@ export default function Page() {
               <li><Link href="/blog/how-to-earn-money-on-youtube/">YouTube Income Streams Beyond Ads</Link></li>
               <li><Link href="/blog/how-to-earn-money-on-youtube/">YouTube Affiliate Marketing Guide</Link></li>
               <li><Link href="/blog/how-to-earn-money-on-youtube/">How to Get Brand Sponsorships on YouTube</Link></li>
+              <li><Link href="/youtube-sponsorship-calculator/">YouTube Sponsorship Calculator</Link></li>
             </ul>
           </div>
 

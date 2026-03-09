@@ -17,6 +17,10 @@ export default function Footer() {
                         <a href="/youtube-channel-valuation-calculator/">Channel Valuation</a>
                         <a href="/youtube-cpm-calculator/">CPM Calculator</a>
                         <a href="/youtube-rpm-calculator/">RPM Calculator</a>
+                        <a href="/youtube-shorts-calculator/">Shorts Calculator</a>
+                        <a href="/youtube-sponsorship-calculator/">Sponsorship Calculator</a>
+                        <a href="/youtube-upload-planner/">Upload Planner</a>
+                        <a href="/youtube-watch-time-calculator/">Watch Time Calculator</a>
                         <a href="/tiktok-earnings-calculator/">TikTok Earnings</a>
                         <a href="/instagram-earnings-calculator/">Instagram Earnings</a>
                         <a href="/adsense-revenue-calculator/">AdSense Revenue</a>

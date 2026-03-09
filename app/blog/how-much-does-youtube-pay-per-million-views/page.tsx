@@ -656,6 +656,7 @@ export default function Page() {
                             <li><Link href="/blog/youtube-affiliate-marketing-guide/">YouTube Affiliate Marketing Guide</Link></li>
                             <li><Link href="/blog/how-to-get-youtube-sponsorships/">How to Get Brand Sponsorships on YouTube</Link>
                             </li>
+                            <li><Link href="/youtube-sponsorship-calculator/">YouTube Sponsorship Calculator</Link></li>
                         </ul>
                     </div>
 
