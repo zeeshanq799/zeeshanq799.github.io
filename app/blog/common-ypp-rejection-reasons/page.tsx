@@ -231,10 +231,10 @@ export default function Page() {
                     <h2 id="overview">Understanding YouTube Partner Program Rejections</h2>
                     <div className="internal-hub-links">
                         <ul>
-                            <li><Link href="/blog/youtube-monetization-requirements-2026/">YouTube Monetization Requirements
+                            <li><Link href="/blog/how-to-earn-money-on-youtube/">YouTube Monetization Requirements
                                 2026</Link></li>
-                            <li><Link href="/blog/youtube-partner-program-approval-process/">YouTube Partner Program Approval
-                                Process</Link></li>
+                            <li><Link href="/youtube-monetization-checker/">YouTube Monetization Eligibility Checker</Link></li>
+                            <li><Link href="/youtube-watch-time-calculator/">YouTube Watch Time Calculator</Link></li>
                         </ul>
                     </div>
 

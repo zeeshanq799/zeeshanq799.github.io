@@ -12,6 +12,39 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        url: "/blog/how-to-rank-youtube-videos/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "📈",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE GROWTH",
+        title: "How to Rank YouTube Videos in 2026: Complete Step-by-Step Guide",
+        description: "Complete step-by-step guide to ranking YouTube videos in 2026: keyword targeting, title optimization, thumbnail creation, retention tactics, promotion strategies, and analytics.",
+        readTime: "20 min read",
+        updated: "March 15, 2026"
+    },
+    {
+        url: "/blog/how-to-increase-youtube-rpm/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "💸",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE EARNINGS",
+        title: "How to Increase Your YouTube RPM in 2026",
+        description: "Proven strategies to increase YouTube RPM from $3 to $10+. Data-backed tactics for niche optimization, audience geography, video structure, and advertiser appeal in 2026.",
+        readTime: "20 min read",
+        updated: "March 15, 2026"
+    },
+    {
+        url: "/blog/how-to-get-youtube-sponsorships/",
+        imgClass: "bg-gradient-sponsorship-card",
+        icon: "🤝",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE EARNINGS",
+        title: "How to Get YouTube Sponsorships in 2026: Complete Creator Guide",
+        description: "Learn how to get YouTube sponsorships as a small channel. Complete guide to finding brand deals, writing pitch emails, and pricing your integrations in 2026.",
+        readTime: "24 min read",
+        updated: "March 15, 2026"
+    },
+    {
         url: "/blog/common-ypp-rejection-reasons/",
         imgClass: "bg-gradient-yt-card",
         icon: "❌",
