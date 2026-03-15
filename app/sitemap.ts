@@ -41,6 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push("/blog/tiktok-money/", "weekly", 0.8);
     push("/blog/adsense-tips/", "weekly", 0.8);
     push("/blog/freelance-rates/", "weekly", 0.8);
+    push("/blog/how-to-get-youtube-sponsorships/", "weekly", 0.8);
+    push("/blog/how-to-rank-youtube-videos/", "weekly", 0.8);
 
     push("/youtube-earnings-calculator/", "weekly", 0.8);
     push("/youtube-cpm-calculator/", "weekly", 0.8);
@@ -62,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push("/blog/youtube-cpm-guide/", "weekly", 0.7);
     push("/blog/rpm-vs-cpm-youtube/", "weekly", 0.7);
     push("/blog/tiktok-creativity-program-rpm-2026/", "weekly", 0.7);
+    push("/blog/how-to-increase-youtube-rpm/", "weekly", 0.7);
 
     push("/about/", "yearly", 0.4);
     push("/contact/", "yearly", 0.4);
