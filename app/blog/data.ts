@@ -12,6 +12,39 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        url: "/blog/low-competition-youtube-niches/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "🎯",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE EARNINGS",
+        title: "Low Competition YouTube Niches Worth Starting in 2026",
+        description: "Discover 25+ low competition YouTube niches in 2026 with high CPM potential. Data-backed analysis of untapped opportunities and monetization strategies.",
+        readTime: "21 min read",
+        updated: "February 19, 2026"
+    },
+    {
+        url: "/blog/youtube-affiliate-marketing-guide/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "🔗",
+        tagClass: "tag-red",
+        tagText: "AFFILIATE MARKETING",
+        title: "YouTube Affiliate Marketing Guide 2026: Complete Strategy",
+        description: "Complete YouTube affiliate marketing guide: program selection, content strategies, link placement, FTC compliance, tracking, and optimization.",
+        readTime: "20 min read",
+        updated: "February 19, 2026"
+    },
+    {
+        url: "/blog/youtube-income-streams-beyond-ads/",
+        imgClass: "bg-gradient-yt-card",
+        icon: "💸",
+        tagClass: "tag-red",
+        tagText: "YOUTUBE MONETIZATION",
+        title: "YouTube Income Streams Beyond Ads: 7 Ways to Earn More in 2026",
+        description: "7 proven YouTube income streams beyond ads: sponsorships ($5K-$8K per deal), affiliate marketing, memberships, digital products, courses, merchandise, and services.",
+        readTime: "21 min read",
+        updated: "February 19, 2026"
+    },
+    {
         url: "/blog/how-to-rank-youtube-videos/",
         imgClass: "bg-gradient-yt-card",
         icon: "📈",

@@ -41,6 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push("/blog/tiktok-money/", "weekly", 0.8);
     push("/blog/adsense-tips/", "weekly", 0.8);
     push("/blog/freelance-rates/", "weekly", 0.8);
+    push("/blog/low-competition-youtube-niches/", "weekly", 0.8);
+    push("/blog/youtube-affiliate-marketing-guide/", "weekly", 0.8);
+    push("/blog/youtube-income-streams-beyond-ads/", "weekly", 0.8);
     push("/blog/how-to-get-youtube-sponsorships/", "weekly", 0.8);
     push("/blog/how-to-rank-youtube-videos/", "weekly", 0.8);
 

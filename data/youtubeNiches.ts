@@ -169,8 +169,8 @@ export const youtubeNiches: NicheData[] = [
             "Focus on educational breakdowns of blockchain projects.",
             "Build trust through transparent analysis and risk disclosure.",
         ],
-        activeEarnings: false,
-        activeCpm: false,
+        activeEarnings: true,
+        activeCpm: true,
     },
     {
         slug: "real-estate",
@@ -233,8 +233,8 @@ export const youtubeNiches: NicheData[] = [
             "Partner with SaaS brands for sponsorship.",
             "Promote lifetime deal platforms.",
         ],
-        activeEarnings: false,
-        activeCpm: false,
+        activeEarnings: true,
+        activeCpm: true,
     },
     {
         slug: "automotive",
